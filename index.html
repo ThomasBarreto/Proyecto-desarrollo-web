@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SneakerStore</title>
+  <link rel="shortcut icon" href="./img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <script src="https://kit.fontawesome.com/6686341929.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header> 
+    <div class="contenedorLogo">
+      <a href="./index.html"><img class="contenedorLogo__logo" src="./img/Sneakerstorelogo.png" alt="Logo SneakerStore"></a>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar__ul">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./pages/zapatillas.html">Zapatillas</a></li>
+        <li><a href="./pages/Ayuda.html">Ayuda</a></li>
+        <li><a href="./pages/sobrenosotros.html">Sobre Nosotros</a></li>
+      </ul>
+    </nav>
+    <div class="icono">
+      <a href="./pages/contacto.html"><i class="fa-solid fa-user"></i></a>
+
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="container__carrito">
+            <div class="imagencarrito">
+              <img src="../img/jordanlow.jpg" alt="">
+            </div>
+            <div class="descripcioncarrito">
+              <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+              <p class="descripcion__precio">$260</p>
+            </div>
+            <div class="inputcantidad">
+              <input type="number" name="cantidad" placeholder="1">
+            </div>
+          </div>
+          <div class="buttoncompra">
+            <button type="submit">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar responsive -->
+    <nav class="nav__responsive">
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+          <a href="./pages/contacto.html"><i class="fa-solid fa-user"></i></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <ul class="navbar__ul__responsive">
+              <li><a href="./index.html">Inicio</a></li>
+              <li><a href="./pages/zapatillas.html">Zapatillas</a></li>
+              <li><a href="./pages/Ayuda.html">Ayuda</a></li>
+              <li><a href="./pages/sobrenosotros.html">Sobre Nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="carrito_responsive">
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1"><i class="fa-solid fa-cart-shopping"></i></button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel1">
+        
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <div class="container__carrito">
+            <div class="imagencarrito">
+              <img src="../img/jordanlow.jpg" alt="">
+            </div>
+            <div class="descripcioncarrito">
+              <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+              <p class="descripcion__precio">$260</p>
+            </div>
+            <div class="inputcantidad">
+              <input type="number" name="cantidad" placeholder="1">
+            </div>
+          </div>
+          <div class="buttoncompra">
+            <button type="submit">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar responsive -->
+  </header>
+
+  <main>
+    <div class="indexBackground" alt="Sneaker imagen de Fondo"></div>
+    <div class="titulo">
+      <h2>Ultimos Ingresos de SneakerStore</h2>
+      <span class="separacion"></span>
+    </div>
+    <section class="section1 ">
+      <div class="container">
+        <img class="carruselImagenes" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div class="container">
+        <img class="carruselImagenes" src="./img/adidas forum low badbunny back to school 1.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div class="container">
+        <img class="carruselImagenes" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div class="container">
+        <img class="carruselImagenes" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+    </section>
+
+    <!-- CARRUSEL SECTION 1 RESPONSIVE -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/jordanlow.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/Sobrenosotrosimagenchica.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/adidas forum low badbunny back to school 1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item active">
+          <img src="./img/jordanlow.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- FIN CARRUSEL SECTION 1 RESPONSIVE -->
+
+    <div class="titulo">
+      <h2>Modelos mas vendidos</h2>
+      <span class="separacion"></span>
+    </div>
+    <section class="section2">
+      <div  class="container2">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2 zaparesponsive">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2 zaparesponsive">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+      <div  class="container2 zaparesponsive">
+        <img class="carruselImagenes2" src="./img/jordanlow.jpg" alt="Jordan Low">
+        <p class="nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+        <p class="precio">$260</p>
+      </div>
+    </section>
+    <div class="botonvertodo">
+      <button id="vertodo"><a href="./pages/zapatillas.html"> Ver todo</a></button>
+    </div>
+
+    <section class="contairner__contact-ubi">
+      <div class="container__ubi">
+        <h3>Donde nos Ubicamos</h3>
+        <span class="separacion"></span>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.0093708475088!2d-58.40849908756843!3d-34.75535676541109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd29020ac9203%3A0xcb6b4ef529c04f0e!2sGral.%20Jos%C3%A9%20de%20San%20Mart%C3%ADn%20365%2C%20B1832%20BUH%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1685149528703!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <form class="container__contactform">
+        <div class="titulo__contacto">
+          <a href="./pages/contacto.html"><h3>Contactanos</h3></a>
+        <span class="separacion"></span>
+        </div>
+        <div class="contact__form">
+          <label for="nombre"></label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        </div>
+        <div class="contact__form">
+          <label for="correo"></label>
+          <input type="email" id="correo" name="correo" placeholder="Email" required>
+        </div>
+        <div class="contact__form">
+          <label for="mensaje"></label>
+          <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+        </div>
+        <div class="contact__buttom">
+          <input type="submit" value="Enviar">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/nike/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@nike?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <div class="cookies">
+      <a href="index.html">© Sneaker Store 2023</a>
+    </div>
+  </footer>
+</body>
+</html>
