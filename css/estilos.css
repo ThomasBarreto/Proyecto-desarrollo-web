@@ -22,6 +22,7 @@ body {
 /* Header */
 
 header{ 
+    background-color: red;
     grid-area: header;
     width: auto;
     display: flex;
