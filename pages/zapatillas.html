@@ -21,13 +21,37 @@
             <ul class="navbar__ul">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./zapatillas.html">Zapatillas</a></li>
-                <li><a href="./Ayuda.html">Ayuda</a></li>
+                <li><a href="./ayuda.html">Ayuda</a></li>
                 <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
             </ul>
         </nav>
         <div class="icono">
             <a href="./contacto.html"><i class="fa-solid fa-user"></i></a>
-            <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container__carrito">
+                        <div class="imagencarrito">
+                            <img src="../img/jordanlow.jpg" alt="">
+                        </div>
+                        <div class="descripcioncarrito">
+                            <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+                            <p class="descripcion__precio">$260</p>
+                        </div>
+                        <div class="inputcantidad">
+                            <input type="number" name="cantidad" placeholder="1">
+                        </div>
+                    </div>
+                    <div class="buttoncompra">
+                        <button type="submit">Comprar</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
             
@@ -54,18 +78,43 @@
             </div>
         </nav>
         <div class="carrito_responsive">
-            <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1"><i class="fa-solid fa-cart-shopping"></i></button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel1">
+                
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <div class="container__carrito">
+                        <div class="imagencarrito">
+                            <img src="../img/jordanlow.jpg" alt="">
+                        </div>
+                        <div class="descripcioncarrito">
+                            <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+                            <p class="descripcion__precio">$260</p>
+                        </div>
+                        <div class="inputcantidad">
+                            <input type="number" name="cantidad" placeholder="1">
+                        </div>
+                    </div>
+                    <div class="buttoncompra">
+                        <button type="submit">Comprar</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Navbar responsive -->
     </header>
     <main class="mainzapatillas">
-        <section class="zapatillasBackground"></section>
+        <div class="zapatillasBackground"></div>
         <h1 class="titulozapatillas">Sneakers</h1>
         <section class="section__container">
 
             <!-- FILTROS RESPONSIVE  -->
             <article class="filtros__responsive">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop2">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop2">
                     Filtros
                 </button>
                 <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop2" aria-labelledby="staticBackdrop2Label">
@@ -156,64 +205,64 @@
             </article>
             <article class="article__zapatillas">
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/adidas Forum Buckle Low Bad Bunny Blue Tint.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Adidas Forum Buckle Low Bad Bunny Blue Tint</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
                     <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <p class="nombrezapas">Jordan 1 Low Snakeskin Vivid Green</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/Jordan 1 Low Bulls.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 1 Low Bulls</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/Jordan 1 Low Washed Denim (GS).jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 1 Low Washed Denim</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/adidas Forum Buckle Low Bad Bunny Last Forum.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Adidas Forum Buckle Low Bad Bunny Last Forum</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
-                </div>
-                    <div class="contenidoimagen">
-                        <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                        <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                        <p>$260</p>
-                        </div>
-                <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/adidas Forum Low Bad Bunny Pink Easter Egg.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Adidas Forum Low Bad Bunny Pink Easter Egg</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/Jordan 1 Mid Diamond Shorts.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 1 Mid Diamond Shorts</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/Jordan 1 Mid Sonics (2021).jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 1 Mid Sonics</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/Jordan 1 Mid French Blue Fire Red.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 1 Mid French Blue Fire Red</p>
+                    <p class="preciozapas">$260</p>
                 </div>
                 <div class="contenidoimagen">
-                    <img src="../img/jordanlow.jpg" alt="Jordan Low">
-                    <p>Jordan 1 Low Snakeskin Vivid Green</p>
-                    <p>$260</p>
+                    <img src="../img/Zapatillas-Modelos/Jordan 1 Retro High OG Bleached Coral.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 1 Retro High OG Bleached Coral</p>
+                    <p class="preciozapas">$260</p>
+                </div>
+                <div class="contenidoimagen">
+                    <img src="../img/Zapatillas-Modelos/Jordan 4 Retro Midnight Navy.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 4 Retro Midnight Navy</p>
+                    <p class="preciozapas">$260</p>
+                </div>
+                <div class="contenidoimagen">
+                    <img src="../img/Zapatillas-Modelos/Jordan 4 Retro SB Pine Green.jpg" alt="Jordan Low">
+                    <p class="nombrezapas">Jordan 4 Retro SB Pine Green</p>
+                    <p class="preciozapas">$260</p>
                 </div>
             </article>
         </section>

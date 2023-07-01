@@ -22,7 +22,6 @@ body {
 /* Header */
 
 header{ 
-    background-color: red;
     grid-area: header;
     width: auto;
     display: flex;
@@ -39,6 +38,12 @@ header{
 
 .nav__responsive{
     display: none;
+}
+
+.btn {
+    background-color: none;
+    padding: 0px;
+    border: none;
 }
 
 .carrito_responsive{
@@ -133,7 +138,7 @@ main{
 }
 
 .section1 {
-    grid-area: section2;
+
     display: grid;
     grid-template-columns: repeat(4,1fr);
     justify-items: center;
@@ -158,14 +163,16 @@ main{
 
 
 .nombre{
-    padding-top: 20px;
+    padding-top: 12px;
+    width: 250px;
     text-align: center;
     font-weight: bold;
+    font-size: 13px;
 }
 
 .precio{
     text-align: center;
-    
+    font-size: 13px;
 }
 
 
@@ -201,12 +208,18 @@ main{
     display: flex;
     justify-content: center;
     margin: 30px;
+
+}
+
+.botonvertodo :hover{
+    scale: 1.1;
 }
 
 #vertodo a{
     text-decoration: none;
     color: black;
-    text-transform: uppercase;
+    font-weight: bold;
+
 }
 
 #vertodo {
@@ -215,8 +228,10 @@ main{
     border: 1px solid black;
     padding: 5px;
     background-color: white;
-
+    border-radius: 5px;
 }
+
+
 
 /* Footer */
 
@@ -370,6 +385,7 @@ footer{
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: start;
 }
 
 .titulozapatillas {
@@ -380,12 +396,29 @@ footer{
 }
 
 .contenidoimagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
+    margin: 0 auto;
 }
 .contenidoimagen img {
     width: 300px;
-    box-shadow: 2px 2px 5px 0px #444;
-    border-radius: 3px;
+    border-radius: 3px; 
+}
+
+.nombrezapas{
+    padding-top: 10px;
+    width: 280px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.preciozapas{
+    font-size: 13px;
+    margin-bottom: 8px;
 }
 
 .article__zapatillas {
@@ -394,9 +427,9 @@ footer{
     width: 100%;
     max-width: 1000px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
+
 }
 
 .filtros__responsive{
@@ -723,10 +756,10 @@ footer{
 
 /* RESPONSIVE MOBILE */
 
-@media (max-width:576px) {
+@media (max-width:580px) {
 
     /* Index.html */
-    
+
     header{
         margin: 0px;
         padding: 0px;
@@ -801,12 +834,6 @@ footer{
 
     /* main index */
 
-    .indexBackground {
-        width: 100%;
-        height:80vh;
-        background-position: center;
-    }
-
     .navbar ul li {
         font-size: 12px;
         font-weight: 700;
@@ -822,6 +849,9 @@ footer{
 
     #carouselExampleAutoplaying{
         display: flex;
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
     }
 
     .carousel-inner{
@@ -1016,7 +1046,6 @@ footer{
         align-items: center;
     }
 
-
     /* AYUDA */
 
     .ayudaBackground{
@@ -1081,7 +1110,7 @@ footer{
     }
 
 
-    /* Contacto */
+    /* acto */
 
     .container__contactform2{
         width: 100%;

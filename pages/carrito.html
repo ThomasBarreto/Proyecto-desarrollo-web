@@ -28,9 +28,32 @@
         </nav>
         <div class="icono">
             <a href="./contacto.html"><i class="fa-solid fa-user"></i></a>
-            <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container__carrito">
+                        <div class="imagencarrito">
+                            <img src="../img/jordanlow.jpg" alt="">
+                        </div>
+                        <div class="descripcioncarrito">
+                            <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+                            <p class="descripcion__precio">$260</p>
+                        </div>
+                        <div class="inputcantidad">
+                            <input type="number" name="cantidad" placeholder="1">
+                        </div>
+                    </div>
+                    <div class="buttoncompra">
+                        <button type="submit">Comprar</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
             
     <!-- Navbar responsive -->
         <nav class="nav__responsive">
@@ -55,7 +78,32 @@
             </div>
         </nav>
         <div class="carrito_responsive">
-            <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1"><i class="fa-solid fa-cart-shopping"></i></button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel1">
+                
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <div class="container__carrito">
+                        <div class="imagencarrito">
+                            <img src="../img/jordanlow.jpg" alt="">
+                        </div>
+                        <div class="descripcioncarrito">
+                            <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
+                            <p class="descripcion__precio">$260</p>
+                        </div>
+                        <div class="inputcantidad">
+                            <input type="number" name="cantidad" placeholder="1">
+                        </div>
+                    </div>
+                    <div class="buttoncompra">
+                        <button type="submit">Comprar</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Navbar responsive -->
     </header>
