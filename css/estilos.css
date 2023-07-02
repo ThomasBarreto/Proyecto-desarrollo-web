@@ -8,16 +8,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-    ;
-}
 
 /* Header */
 
@@ -92,13 +82,15 @@ header{
 
 /* Main */
 
-main{
+.main__index{
     width: 100%;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .imgbanner{
-    max-width: 100%;
+    width: 100%;
     height: 70vh;
 }
 
@@ -259,7 +251,7 @@ footer{
 /*section3 */
 
 
-.contairner__contact-ubi {
+.container__contact-ubi {
     grid-area: section3;
     background-image: url(../img/SneakerSobrenosotros.jpg); 
     background-repeat: no-repeat;
@@ -474,25 +466,30 @@ footer{
 
 .ayudacontainer{
     width: 100%;
-    height: 78vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
     justify-items: center;
+    
 
 }
 
 
 .imagenayuda{
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
     padding: 10px 160px;
     text-align: center;
+
 }
 
 .imagenayuda p{
+    width: 200px;
     background-color: black;
+    margin-top: 10px;
     padding: 10px 0px;
     font-weight: bold;
     opacity: 0.5;
@@ -559,28 +556,18 @@ footer{
     font-weight: bold;
     font-size: 30px;
 }
-.container__ubisobrenosotros div {
+.container__iframe {
     width: 100%;
     height: 100%;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.container__ubisobrenosotros div h3 {
-    font-weight: 600;
-    width: 350px;
-    font-size: 25px;
-    position: absolute;
-    z-index: 1;
-}
-.container__ubisobrenosotros div iframe{
+.container__iframe iframe{
     width: 100%;
-    padding: 20px 60px;
-    opacity: 0.5;
-
+    padding: 30px;
+    opacity: 0.6;
 }
 
 
@@ -751,7 +738,7 @@ footer{
 
 /* RESPONSIVE MOBILE */
 
-@media (max-width:580px) {
+@media (min-width:320px) and (max-width:580px) {
 
     /* Index.html */
 
@@ -827,15 +814,16 @@ footer{
         display: none;
     } 
 
-    /* main index */
     .navbar ul li {
         font-size: 12px;
         font-weight: 700;
     }
-
+    
     .fa-solid{
         font-size: 20px;
     }
+    
+    /* main index */
 
     .section1 {
         display: none;
@@ -845,28 +833,42 @@ footer{
         display: flex;
         width: 90%;
         margin: 0 auto;
-        padding: 10px;
+        padding: 20px;
     }
 
     .carousel-inner{
         width: 100%;
         margin: 20px;
-        height: 600px;
+    }
+
+    .carousel-control-next-icon{
+        width: 20px;
+        margin-right: 12px;
+    }
+
+    .carousel-control-prev-icon{
+        width: 20px;
+        margin-left: 12px;
     }
 
 
+    .titulo {
+        margin-top: 0;
+    }
     
     .titulo h2 {
-        font-size: 22px;
+        font-size: 18px;
+        text-align: center;
     }
 
     .nombre{
-        font-size: 15px;
-        width: 220px;
+        font-size: 12px;
+        width: 80%;
     }
     
     .precio {
-        font-size: 15px;
+        font-size: 12px;
+        width: 80%;
     }
 
     .section2 {
@@ -875,30 +877,22 @@ footer{
     }
 
     .container2 {
-        margin: 0;
-        padding: 10px;
+        width: 200px;
+        margin: 0 auto;
     }
 
     .carruselImagenes2{
-        width: 240px;
-        height: 370px;
+        width: 180px;
+        height: 320px;
     }
 
-    .zaparesponsive {
-        display: none;
-    }
-
-    .contairner__contact-ubi{
+    .container__contact-ubi{
         display: flex;
         flex-direction: column;
         background: none;
-    }
-
-    .contairner__contact-ubi{
-    
-        width: 580px;
+        width: 100%;
         height: 100vh;
-        margin: 60px 0px;
+        margin: 70px 0px;
     }
 
     .container__ubi {
@@ -914,14 +908,15 @@ footer{
     }
 
     .container__ubi iframe{
-        padding-top: 20px;
-        width: 540px;
+        width:100%;
+        height: 450px;
+        padding: 20px;
     }
 
     .container__contactform{
         display: flex;
         flex-direction: column;
-        width: 580px;
+        width: 100%;
     }
 
     .titulo__contacto {
@@ -929,6 +924,7 @@ footer{
         flex-direction: column;
         align-items: center;
         padding: 20px;
+        font-size: 15px;
     }
 
     .container__contactform a h3{
@@ -1048,66 +1044,64 @@ footer{
 
     /* AYUDA */
 
-    .ayudaBackground{
+    .ayudacontainer{
         width: 100%;
+        height: 100vh;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
-        grid-template-areas: 
-        "imguno imgdos"
-        "imgtres imgcuatro"
-        "imgcinco imgseis"
-        ;
         align-items: center;
-        justify-content: center;
+        justify-content: center; 
+        grid-template-columns: repeat(2,1fr);
     }
 
     .imagenayuda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
         padding: 0px;
     }
 
-    .imagenayuda .uno{
-        grid-area:imguno
+    .imagenayuda img{
+        width: 160px;
+        height: 160px;
     }
 
-    .imagenayuda .dos{
-        grid-area:imgdos
+    .imagenayuda p{
+        width: 160px;
+        font-size: 12px;
     }
 
-    .imagenayuda .tres{
-        grid-area:imgtres
-    }
-
-    .imagenayuda .cuatro{
-        grid-area:imgcuatro
-    }
-
-    .imagenayuda .cinco{
-        grid-area:imgcinco
-    }
-
-    .imagenayuda .seis{
-        grid-area:imgseis
-    }
 
     /* Sobre nosotros */
 
     .sobrenosotros__p{
+        font-size: 15px;
         width: 100%;
         margin: 0 auto;
     }
     .containerimagenessobrenosotros{
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        row-gap: 20px;
         justify-content: center;
         align-items: center;
     }
 
     .containerimagenessobrenosotros img{
-        width: 520px;
-        height: 600px;
-        padding: 20px;
+        width: 100%;
+        height: 500px;
     }
 
+
+    .container__ubisobrenosotros h2{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .container__iframe iframe{
+        width: 100%;
+        height: 480px;
+    }
 
     /* contacto */
 
@@ -1116,16 +1110,26 @@ footer{
     }
 
     .contactform2{
-        width: 80%;
-        height: 600px;
+        width: 90%;
+        height: 400px;
         justify-content: space-around;
     }
 
+    .contactform2 h3{
+        font-size: 25px;
+    }
+
+    .contactform2__titulo a p{
+        font-size: 12px;
+    }
 
     .contact__button2 button{
         width: 100px;
-        height: 50px;
-        margin: 0 auto;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
     }
 
 
@@ -1135,6 +1139,7 @@ footer{
         width: 100%;
         height: 100%;
     }
+
 
 }
 
