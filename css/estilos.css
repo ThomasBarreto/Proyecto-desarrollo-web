@@ -126,9 +126,10 @@ header{
 }
 
 .section1 {
-
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    margin: 0 auto;
+    column-gap: 100px;
     justify-items: center;
     align-content: center;
 }
@@ -274,7 +275,7 @@ footer{
 .container__ubi h3{
     width: 100%;
     font-size: 25px;
-    color: white;
+    color: black;
     padding: 12px;
     
 }
@@ -294,7 +295,7 @@ footer{
 
 .container__contactform h3 {
     font-size: 25px;
-    color: white;
+    color: black;
     padding: 12px;  
 
 }
@@ -1143,8 +1144,15 @@ footer{
         background-image: url(../img/Banners/banner-indexresponsive.jpg);
         background-position: center;
         background-size: cover;
-        height: 75vh;
+        height: 60vh;
         width: 100%;
     }
 
+    .imgbanner__zapas{
+        height: 60vh;
+    }
+
+    .imgbanner__sobrenosotros{
+        height: 60vh;
+    }
 }
