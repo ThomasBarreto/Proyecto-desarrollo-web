@@ -456,12 +456,6 @@ footer{
 
 /* Ayuda */
 
-.ayudaBackground{
-    border-top: 2px solid black;
-    background-color:#ccc
-}
-
-
 .ayudacontainer{
     width: 100%;
     height: 80vh;
@@ -469,15 +463,16 @@ footer{
     grid-template-columns: repeat(3,1fr);
     align-items: center;
     justify-items: center;
-    
+    border-top: 2px solid black;
+    background-color:#ccc
 
 }
 
-
 .imagenayuda{
-    width: 100%;
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 10px 160px;
     text-align: center;
