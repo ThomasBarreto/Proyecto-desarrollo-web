@@ -1,5 +1,19 @@
+/*IMPORT SCSS*/
+@import 'variables';
+@import 'header';
+@import 'index';
+@import 'footer';
+@import 'zapatillas';
+@import 'ayuda';
+@import 'sobrenosotros';
+@import 'contacto';
+@import 'mediaqueries';
+
+/*IMPORT FUENTES*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
 
+
+/*RESET CSS*/
 *{
     padding: 0;
     margin: 0;
@@ -7,8 +21,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/*INDEX HEADER*/
 
+/*INDEX HEADER*/
 header{
     grid-area: header;
     width: auto;
@@ -889,7 +903,7 @@ footer {
                     font-weight: bold;
                     margin-right: 20px;
                     color: black;
-                    font-size: 18px;
+                    font-size: 14px;
                     padding: 10px 15px;
                     border: 1px solid black;
                     border-radius: 2px;
@@ -925,6 +939,17 @@ footer {
                     .lista__filtros {
                         list-style: none;
                     }
+                }
+                .deshacer{
+                    font-weight: bold;
+                    margin-right: 20px;
+                    color: black;
+                    font-size: 14px;
+                    padding: 10px 15px;
+                    border: 1px solid black;
+                    border-radius: 2px;
+                    box-shadow: none;
+                    background-color: white;
                 }
             }
             .article__zapatillas {

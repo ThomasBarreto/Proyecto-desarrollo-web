@@ -1,0 +1,96 @@
+/*ZAPATILLAS*/
+
+.mainzapatillas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .container-fluid{
+        .imgbanner__zapas {
+            background-image: url(../img/Banners/banner-zapatillas.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 75vh;
+        }
+    }
+    .titulozapatillas {
+        text-align: center;
+        margin: 40px 0px;
+        text-transform: uppercase;
+        font-size: 28px;
+    }
+    .section__container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: start;
+        .filtros__responsive {
+            display: none;
+            .btn {
+                background-color: none;
+                padding: 0px;
+                border: none;
+            }
+        }
+        .article__filtros {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            .container__filtros {
+                text-transform: uppercase;
+                padding-bottom: 25px;
+            }
+            .container__marcas ul {
+                padding: 10px 0;
+                list-style: none;
+            }
+            .container__talles ul {
+                padding: 10px 0;
+                list-style: none;
+            }
+            .container__precio ul {
+                padding: 10px 0;
+                list-style: none;
+            }
+            .deshacer {
+                padding: 6px;
+                border: 1px solid black;
+                border-radius: 5px;
+                background-color: white;
+            }
+        }
+        .article__zapatillas{
+            grid-area: zapatillas;
+            margin-left: 50px;
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            .contenidoimagen {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                margin: 0 auto;
+                img {
+                    width: 300px;
+                    border-radius: 3px;
+                }
+                .nombrezapas {
+                    padding-top: 10px;
+                    width: 280px;
+                    height: 30px;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+                .preciozapas {
+                    font-size: 13px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+
+/*SOBRE NOSOTROS*/
+.container-fluid {
+    .imgbanner__sobrenosotros {
+        background-image: url(../img/Banners/banner-sobrenosotros.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 75vh;
+    }
+}
+.sobrenosotros__p {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 40px;
+}
+.containerimagenessobrenosotros{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    img {
+        width: 600px;
+        height: 700px;
+        }
+    }
+.container__ubisobrenosotros {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .container__iframe {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        iframe {
+            width: 100%;
+            padding: 30px;
+            opacity: 0.6;
+        }
+    }
+}

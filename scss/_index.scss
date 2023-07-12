@@ -1,0 +1,188 @@
+/*INDEX MAIN*/
+
+.main__index{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .imgbanner__index {
+        background-image: url(../img/Banners/banner-index.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 75vh;
+    }
+    .titulo{
+        margin-top: 60px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            padding: 8px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .separacion {
+            width: 50px;
+            height: 3px;
+            background-color: rgba(0, 0, 0, 0.301);
+        }
+    }
+    .section1{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        column-gap: 100px;
+        justify-items: center;
+        align-content: center;
+        .container {
+            margin: 0px auto;
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .carruselImagenes {
+                padding-top: 20px;
+                width: 340px;
+                height: 450px;
+            }
+            .nombre {
+                padding-top: 12px;
+                width: 250px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 13px;
+            }
+            .precio {
+                text-align: center;
+                font-size: 13px;
+            }
+        }
+    }
+    #carouselExampleAutoplaying {
+        display: none;
+    }
+    .section2 {
+        grid-area: section2;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .container2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 10px;
+            margin: 0 40px;
+        }
+        .carruselImagenes2 {
+            width: 440px;
+            height: 580px;
+            padding-top: 30px;
+        }
+    }
+    .botonvertodo{
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+        &:hover{
+            scale: 1.1;
+        }
+        #vertodo{
+            font-size: 12px;
+            width: 80px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: white;
+            border-radius: 5px;
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+    .container__contact-ubi{
+        grid-area: section3;
+        background-image: url(../img/SneakerSobrenosotros.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .container__ubi {
+            text-align: center;
+            height: 100%;
+            h3 {
+                width: 100%;
+                font-size: 25px;
+                color: black;
+                padding: 12px;
+            }
+            iframe {
+                width: 650px;
+                height: 500px;
+                opacity: 0.8;
+            }
+        }
+        .container__contactform {
+            width: 700px;
+            text-align: center;
+            .titulo__contacto{
+                h3 {
+                    font-size: 25px;
+                    color: black;
+                    padding: 12px;
+                }
+                a {
+                    text-decoration: none;
+                }
+            }
+            .contact__form{
+                input {
+                    color: white;
+                    background-color: black;
+                    opacity: 0.6;
+                    width: 100%;
+                    height: 38px;
+                    padding: 5px;
+                    margin: 3px 0;
+                    border-style: none;
+                    border-radius: 5px;
+                }
+                textarea {
+                    color: white;
+                    background-color: black;
+                    opacity: 0.6;
+                    width: 100%;
+                    height: 60px;
+                    padding: 5px;
+                    margin: 3px 0;
+                    border-style: none;
+                    border-radius: 5px;
+                }
+            }
+            .contact__buttom {
+                display: flex;
+                justify-content: center;
+                input {
+                    width: 140px;
+                    height: 30px;
+                    background-color: black;
+                    opacity: 0.6;
+                    color: white;
+                    border: 2px solid black;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,1018 @@
+/*IMPORT SCSS*/ /*VARIABLES*/ /*HEADER*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+header {
+  grid-area: header;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .contenedorLogo__logo {
+  width: 140px;
+  height: 140px;
+  margin-left: 240px;
+}
+header .navbar__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+header .navbar__ul li {
+  padding: 12px;
+}
+header .navbar__ul li:hover {
+  font-weight: bold;
+  scale: 1.1;
+}
+header .navbar__ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0px 25px;
+}
+header .icono {
+  margin-right: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .icono .fa-solid {
+  font-size: 19px;
+  color: black;
+  padding: 0px 18px;
+  margin-bottom: 13px;
+}
+header .icono .fa-solid:hover {
+  scale: 1.1;
+}
+header .icono .offcanvas-header {
+  border-bottom: 1px solid black;
+}
+header .icono .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+header .icono .offcanvas-body .container__carrito {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: " imgcarrito desccarrito " " imgcarrito desccarrito " " imgcarrito inputcant" " imgcarrito . ";
+  padding: 15px;
+  column-gap: 10px;
+}
+header .icono .offcanvas-body .container__carrito .imagencarrito {
+  grid-area: imgcarrito;
+}
+header .icono .offcanvas-body .container__carrito .imagencarrito img {
+  width: 100px;
+  height: 130px;
+}
+header .icono .offcanvas-body .container__carrito .descripcioncarrito {
+  grid-area: desccarrito;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0px 5px;
+}
+header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__precio {
+  font-size: 14px;
+  margin: 10px 5px;
+  font-weight: bold;
+}
+header .icono .offcanvas-body .container__carrito .inputcantidad {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  grid-area: inputcant;
+}
+header .icono .offcanvas-body .container__carrito .inputcantidad input {
+  text-align: center;
+  font-size: 12px;
+  width: 80px;
+  height: 30px;
+  padding: 2px;
+}
+header .icono .offcanvas-body .buttoncompra button {
+  width: 100%;
+  height: 60px;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+header .nav__responsive {
+  display: none;
+}
+header .nav__responsive .btn {
+  background-color: none;
+  padding: 0px;
+  border: none;
+}
+header .carrito_responsive {
+  display: none;
+}
+header .carrito_responsive .btn {
+  background-color: none;
+  padding: 0px;
+  border: none;
+}
+
+/*INDEX MAIN*/
+.main__index {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main__index .imgbanner__index {
+  background-image: url(../img/Banners/banner-index.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 75vh;
+}
+.main__index .titulo {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__index .titulo h2 {
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main__index .titulo .separacion {
+  width: 50px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+.main__index .section1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  column-gap: 100px;
+  justify-items: center;
+  align-content: center;
+}
+.main__index .section1 .container {
+  margin: 0px auto;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__index .section1 .container .carruselImagenes {
+  padding-top: 20px;
+  width: 340px;
+  height: 450px;
+}
+.main__index .section1 .container .nombre {
+  padding-top: 12px;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+.main__index .section1 .container .precio {
+  text-align: center;
+  font-size: 13px;
+}
+.main__index #carouselExampleAutoplaying {
+  display: none;
+}
+.main__index .section2 {
+  grid-area: section2;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main__index .section2 .container2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10px;
+  margin: 0 40px;
+}
+.main__index .section2 .carruselImagenes2 {
+  width: 440px;
+  height: 580px;
+  padding-top: 30px;
+}
+.main__index .botonvertodo {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.main__index .botonvertodo:hover {
+  scale: 1.1;
+}
+.main__index .botonvertodo #vertodo {
+  font-size: 12px;
+  width: 80px;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+.main__index .botonvertodo #vertodo a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.main__index .container__contact-ubi {
+  grid-area: section3;
+  background-image: url(../img/SneakerSobrenosotros.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main__index .container__contact-ubi .container__ubi {
+  text-align: center;
+  height: 100%;
+}
+.main__index .container__contact-ubi .container__ubi h3 {
+  width: 100%;
+  font-size: 25px;
+  color: black;
+  padding: 12px;
+}
+.main__index .container__contact-ubi .container__ubi iframe {
+  width: 650px;
+  height: 500px;
+  opacity: 0.8;
+}
+.main__index .container__contact-ubi .container__contactform {
+  width: 700px;
+  text-align: center;
+}
+.main__index .container__contact-ubi .container__contactform .titulo__contacto h3 {
+  font-size: 25px;
+  color: black;
+  padding: 12px;
+}
+.main__index .container__contact-ubi .container__contactform .titulo__contacto a {
+  text-decoration: none;
+}
+.main__index .container__contact-ubi .container__contactform .contact__form input {
+  color: white;
+  background-color: black;
+  opacity: 0.6;
+  width: 100%;
+  height: 38px;
+  padding: 5px;
+  margin: 3px 0;
+  border-style: none;
+  border-radius: 5px;
+}
+.main__index .container__contact-ubi .container__contactform .contact__form textarea {
+  color: white;
+  background-color: black;
+  opacity: 0.6;
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+  margin: 3px 0;
+  border-style: none;
+  border-radius: 5px;
+}
+.main__index .container__contact-ubi .container__contactform .contact__buttom {
+  display: flex;
+  justify-content: center;
+}
+.main__index .container__contact-ubi .container__contactform .contact__buttom input {
+  width: 140px;
+  height: 30px;
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/*INDEX FOOTER*/
+footer {
+  grid-area: footer;
+  background-color: black;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  padding: 0px 10px;
+}
+footer .fa-brands {
+  color: white;
+  width: 25px;
+}
+footer .fa-brands:hover {
+  scale: 1.3;
+}
+footer .cookies a {
+  text-decoration: none;
+  color: white;
+}
+
+/*ZAPATILLAS*/
+.mainzapatillas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.mainzapatillas .container-fluid .imgbanner__zapas {
+  background-image: url(../img/Banners/banner-zapatillas.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 75vh;
+}
+.mainzapatillas .titulozapatillas {
+  text-align: center;
+  margin: 40px 0px;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+.mainzapatillas .section__container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: start;
+}
+.mainzapatillas .section__container .filtros__responsive {
+  display: none;
+}
+.mainzapatillas .section__container .filtros__responsive .btn {
+  background-color: none;
+  padding: 0px;
+  border: none;
+}
+.mainzapatillas .section__container .article__filtros {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.mainzapatillas .section__container .article__filtros .container__filtros {
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+.mainzapatillas .section__container .article__filtros .container__marcas ul {
+  padding: 10px 0;
+  list-style: none;
+}
+.mainzapatillas .section__container .article__filtros .container__talles ul {
+  padding: 10px 0;
+  list-style: none;
+}
+.mainzapatillas .section__container .article__filtros .container__precio ul {
+  padding: 10px 0;
+  list-style: none;
+}
+.mainzapatillas .section__container .article__filtros .deshacer {
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+.mainzapatillas .section__container .article__zapatillas {
+  grid-area: zapatillas;
+  margin-left: 50px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.mainzapatillas .section__container .article__zapatillas .contenidoimagen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+.mainzapatillas .section__container .article__zapatillas .contenidoimagen img {
+  width: 300px;
+  border-radius: 3px;
+}
+.mainzapatillas .section__container .article__zapatillas .contenidoimagen .nombrezapas {
+  padding-top: 10px;
+  width: 280px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.mainzapatillas .section__container .article__zapatillas .contenidoimagen .preciozapas {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/*AYUDA*/
+.ayudacontainer {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  border-top: 2px solid black;
+  background-color: #ccc;
+}
+.ayudacontainer .imagenayuda {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 160px;
+  text-align: center;
+}
+.ayudacontainer .imagenayuda a {
+  text-decoration: none;
+  color: white;
+}
+.ayudacontainer .imagenayuda a p {
+  width: 200px;
+  background-color: black;
+  margin-top: 10px;
+  padding: 10px 0px;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+/*SOBRE NOSOTROS*/
+.container-fluid .imgbanner__sobrenosotros {
+  background-image: url(../img/Banners/banner-sobrenosotros.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 75vh;
+}
+
+.sobrenosotros__p {
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  margin: 20px 40px;
+}
+
+.containerimagenessobrenosotros {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.containerimagenessobrenosotros img {
+  width: 600px;
+  height: 700px;
+}
+
+.container__ubisobrenosotros {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container__ubisobrenosotros h2 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.container__ubisobrenosotros .container__iframe {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__ubisobrenosotros .container__iframe iframe {
+  width: 100%;
+  padding: 30px;
+  opacity: 0.6;
+}
+
+/*CONTACTO*/
+.container__contactform2 {
+  background-color: #ccc;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+}
+.container__contactform2 .contactform2 {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 700px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container__contactform2 .contactform2 h3 {
+  font-weight: bold;
+  font-size: 35px;
+}
+.container__contactform2 .contactform2 .contactform2__titulo {
+  font-size: 20px;
+  display: flex;
+  font-weight: bold;
+}
+.container__contactform2 .contactform2 .contactform2__titulo a {
+  text-decoration: none;
+  padding: 0px 20px;
+  color: black;
+}
+.container__contactform2 .contactform2 .contact__form2 {
+  display: flex;
+  width: 80%;
+}
+.container__contactform2 .contactform2 .contact__form2 input {
+  font-weight: bold;
+  color: black;
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background: none;
+  padding: 20px 4px;
+  border-bottom: 2px solid black;
+}
+.container__contactform2 .contactform2 .contact__form2 textarea {
+  font-weight: bold;
+  color: black;
+  width: 100%;
+  height: 100px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  background: none;
+  padding: 10px 4px;
+  border-bottom: 2px solid black;
+}
+.container__contactform2 .contactform2 .contact__button2 button {
+  font-weight: bold;
+  background: none;
+  padding: 12px;
+  margin-top: 20px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+/*MEDIA QUERIS MOBILE*/
+@media (min-width: 320px) and (max-width: 580px) {
+  /*HEADER MEDIA*/
+  header {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu logo carrito";
+    align-items: center;
+    justify-items: center;
+  }
+  header .contenedorLogo {
+    grid-area: logo;
+  }
+  header .contenedorLogo .contenedorLogo__logo {
+    margin: 0px;
+  }
+  header .navbar ul {
+    display: none;
+  }
+  header .navbar ul li {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  header .icono {
+    display: none;
+  }
+  header .nav__responsive {
+    display: flex;
+    grid-area: menu;
+    justify-self: start;
+    padding: 8px;
+  }
+  header .nav__responsive .offcanvas-body {
+    margin: 0px;
+    padding: 0px;
+  }
+  header .nav__responsive .offcanvas-body div {
+    display: flex;
+  }
+  header .nav__responsive .offcanvas-body div .navbar__ul__responsive {
+    list-style-type: none;
+    color: black;
+    padding: 12px;
+  }
+  header .nav__responsive .offcanvas-body div .navbar__ul__responsive li {
+    padding-top: 20px;
+  }
+  header .nav__responsive .offcanvas-body div .navbar__ul__responsive li a {
+    text-decoration: none;
+    color: black;
+  }
+  header .nav__responsive .fa-solid {
+    font-size: 20px;
+    color: black;
+  }
+  header .carrito_responsive {
+    display: flex;
+    grid-area: carrito;
+    justify-self: end;
+    padding: 8px;
+  }
+  header .carrito_responsive .btn {
+    background-color: none;
+    padding: 0px;
+    border: none;
+  }
+  header .carrito_responsive .offcanvas-header {
+    border-bottom: 1px solid black;
+  }
+  header .carrito_responsive .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: " imgcarrito desccarrito " " imgcarrito desccarrito " " imgcarrito inputcant" " imgcarrito . ";
+    padding: 15px;
+    column-gap: 10px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito {
+    grid-area: imgcarrito;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito img {
+    width: 100px;
+    height: 130px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito {
+    grid-area: desccarrito;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px 5px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__precio {
+    font-size: 14px;
+    margin: 10px 5px;
+    font-weight: bold;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    grid-area: inputcant;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad input {
+    text-align: center;
+    font-size: 12px;
+    width: 80px;
+    height: 30px;
+    padding: 2px;
+  }
+  header .carrito_responsive .offcanvas-body .buttoncompra button {
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  /*MAIN INDEX MEDIA*/
+  .main__index .section1 {
+    display: none;
+  }
+  .main__index #carouselExampleAutoplaying {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .main__index #carouselExampleAutoplaying .carousel-inner {
+    width: 100%;
+    margin: 20px;
+  }
+  .main__index #carouselExampleAutoplaying .carousel-control-next-icon {
+    width: 20px;
+    margin-right: 12px;
+  }
+  .main__index #carouselExampleAutoplaying .carousel-control-prev-icon {
+    width: 20px;
+    margin-left: 12px;
+  }
+  .main__index .titulo {
+    margin-top: 25px;
+  }
+  .main__index .titulo h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .main__index .section2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main__index .section2 .container2 {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .main__index .section2 .container2 .carruselImagenes2 {
+    width: 180px;
+    height: 300px;
+  }
+  .main__index .section2 .container2 .nombre {
+    font-size: 12px;
+    width: 80%;
+  }
+  .main__index .section2 .container2 .precio {
+    font-size: 12px;
+    width: 80%;
+  }
+  .main__index .container__contact-ubi {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    width: 100%;
+    height: 100vh;
+    margin: 70px 0px;
+  }
+  .main__index .container__contact-ubi .container__ubi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__index .container__contact-ubi .container__ubi h3 {
+    color: black;
+  }
+  .main__index .container__contact-ubi .container__ubi iframe {
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+  }
+  .main__index .container__contact-ubi .container__contactform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main__index .container__contact-ubi .container__contactform .titulo__contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-size: 15px;
+  }
+  .main__index .container__contact-ubi .container__contactform .titulo__contacto a h3 {
+    color: black;
+  }
+  .main__index .container__contact-ubi .container__contactform .contact__form input {
+    width: 90%;
+  }
+  .main__index .container__contact-ubi .container__contactform .contact__form textarea {
+    width: 90%;
+  }
+  /*FOOTER MEDIA*/
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+  }
+  footer div {
+    padding: 0px 10px;
+  }
+  footer .cookies {
+    font-size: 18px;
+    padding: 0px 2px;
+  }
+  /*ZAPATILLAS*/
+  .mainzapatillas .container-fluid .imgbanner__zapas {
+    height: 60vh;
+  }
+  .mainzapatillas .section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainzapatillas .section__container .article__filtros {
+    display: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: start;
+    align-items: center;
+    color: black;
+  }
+  .mainzapatillas .section__container .filtros__responsive .buttonfiltros {
+    font-weight: bold;
+    margin-right: 20px;
+    color: black;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__marcas {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid black;
+    margin: 5px;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__marcas .lista__filtros {
+    list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__talles {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid black;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__talles .lista__filtros {
+    list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__precio {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros {
+    list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .deshacer {
+    font-weight: bold;
+    margin-right: 20px;
+    color: black;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: none;
+    background-color: white;
+  }
+  .mainzapatillas .section__container .article__zapatillas {
+    width: 100%;
+    display: flex;
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen {
+    width: 180px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen img {
+    width: 170px;
+    height: 230px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .nombrezapas {
+    padding-top: 10px;
+    width: 180px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .preciozapas {
+    width: 80px;
+  }
+  /*AYUDA*/
+  .ayudacontainer {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ayudacontainer .imagenayuda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0px;
+  }
+  .ayudacontainer .imagenayuda img {
+    width: 160px;
+    height: 160px;
+  }
+  .ayudacontainer .imagenayuda a p {
+    width: 160px;
+    font-size: 12px;
+  }
+  /*SOBRE NOSOTROS*/
+  .container-fluid .imgbanner__sobrenosotros {
+    height: 60vh;
+  }
+  .sobrenosotros__p {
+    font-size: 15px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .containerimagenessobrenosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerimagenessobrenosotros img {
+    width: 100%;
+    height: 500px;
+  }
+  .container__ubisobrenosotros h2 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .container__ubisobrenosotros .container__iframe iframe {
+    width: 100%;
+    height: 480px;
+  }
+  /*CONTACTO*/
+  .container__contactform2 {
+    width: 100%;
+  }
+  .container__contactform2 .contactform2 {
+    width: 90%;
+    height: 400px;
+    justify-content: space-around;
+  }
+  .container__contactform2 .contactform2 h3 {
+    font-size: 25px;
+  }
+  .container__contactform2 .contactform2 .contactform2__titulo a p {
+    font-size: 12px;
+  }
+  .container__contactform2 .contactform2 .contact__button2 button {
+    width: 100px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+  /*OFF CANVAS BACKDROP*/
+  .offcanvas-backdrop {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*IMPORT FUENTES*/
+/*RESET CSS*/
 * {
   padding: 0;
   margin: 0;
@@ -861,7 +1875,7 @@ footer .cookies a {
     font-weight: bold;
     margin-right: 20px;
     color: black;
-    font-size: 18px;
+    font-size: 14px;
     padding: 10px 15px;
     border: 1px solid black;
     border-radius: 2px;
@@ -897,6 +1911,17 @@ footer .cookies a {
   }
   .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros {
     list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .deshacer {
+    font-weight: bold;
+    margin-right: 20px;
+    color: black;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: none;
+    background-color: white;
   }
   .mainzapatillas .section__container .article__zapatillas {
     width: 100%;

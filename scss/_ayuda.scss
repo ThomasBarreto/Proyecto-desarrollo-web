@@ -1,0 +1,33 @@
+/*AYUDA*/
+
+.ayudacontainer {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    border-top: 2px solid black;
+    background-color: #ccc;
+    .imagenayuda {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 160px;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: white;
+            p {
+                width: 200px;
+                background-color: black;
+                margin-top: 10px;
+                padding: 10px 0px;
+                font-weight: bold;
+                opacity: 0.5;
+            }
+        }
+    }
+}
