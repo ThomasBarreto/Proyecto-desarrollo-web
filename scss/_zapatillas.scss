@@ -18,7 +18,8 @@
         text-align: center;
         margin: 40px 0px;
         text-transform: uppercase;
-        font-size: 28px;
+        font-weight: bold;
+        font-size: $titulos;
     }
     .section__container {
         display: flex;
@@ -38,26 +39,61 @@
             display: flex;
             flex-direction: column;
             .container__filtros {
-                text-transform: uppercase;
                 padding-bottom: 25px;
+                h2{
+                    font-size: $subtitulos;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
             }
-            .container__marcas ul {
-                padding: 10px 0;
-                list-style: none;
-            }
-            .container__talles ul {
-                padding: 10px 0;
-                list-style: none;
-            }
-            .container__precio ul {
-                padding: 10px 0;
-                list-style: none;
-            }
+            .container__marcas{
+                h3{
+                    font-size: $subtitulos;
+                    font-weight: bold;
+                }
+                ul {
+                    padding: 8px ;
+                    list-style: none;
+                }
+                li{
+                    font-size: $parrafos;
+                }
+            } 
+            .container__talles {
+                h3{
+                    font-size: $subtitulos;
+                    font-weight: bold;
+                }
+                ul {
+                    padding: 8px ;
+                    list-style: none;
+                }
+                li{
+                    font-size: $parrafos;
+                }
+            } 
+            .container__precio{
+                h3{
+                    font-size: $subtitulos;
+                    font-weight: bold;
+                }
+                ul {
+                    padding: 8px ;
+                    list-style: none;
+                }
+                li{
+                    font-size: $parrafos;
+                }
+            } 
             .deshacer {
                 padding: 6px;
                 border: 1px solid black;
                 border-radius: 5px;
                 background-color: white;
+                font-size: $parrafos;
+                &:hover{
+                    scale: 1.02;
+                }
             }
         }
         .article__zapatillas{
@@ -80,14 +116,14 @@
                     border-radius: 3px;
                 }
                 .nombrezapas {
-                    padding-top: 10px;
+                    padding:10px;
                     width: 280px;
-                    height: 30px;
-                    font-size: 13px;
+                    height: 40px;
+                    font-size: $parrafos;
                     font-weight: bold;
                 }
                 .preciozapas {
-                    font-size: 13px;
+                    font-size:$parrafos;
                     margin-bottom: 8px;
                 }
             }

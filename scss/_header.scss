@@ -6,10 +6,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .contenedorLogo__logo{
-        width: 140px;
-        height: 140px;
+    .contenedorLogo{
         margin-left: 240px;
+        .contenedorLogo__logo{
+            width: 140px;
+            height: 140px;
+        }
     }
     .navbar__ul{
         display: flex;

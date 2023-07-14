@@ -9,14 +9,25 @@
         height: 75vh;
     }
 }
+.titulo{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: $titulos;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
 .sobrenosotros__p {
     font-size: 18px;
     font-weight: 400;
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
-    margin: 20px 40px;
+    margin: 15px 55px;
 }
 .containerimagenessobrenosotros{
     width: 100%;
