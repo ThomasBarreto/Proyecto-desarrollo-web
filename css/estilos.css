@@ -543,7 +543,6 @@ footer .cookies a {
 
 .sobrenosotros__p {
   font-size: 18px;
-  font-weight: 400;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -689,8 +688,6 @@ footer .cookies a {
   }
   header .contenedorLogo {
     grid-area: logo;
-  }
-  header .contenedorLogo .contenedorLogo__logo {
     margin: 0px;
   }
   header .navbar ul {
