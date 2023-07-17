@@ -14,14 +14,11 @@
     }
     .titulo{
         margin-top: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include d-flex(center,center,column);
         h1{
             padding: 8px;
             text-transform: uppercase;
-            font-size: $titulos;
+            font-size:  map-get($sizes, titulos);
             font-weight: bold;
         }
         .separacion {
@@ -41,10 +38,7 @@
         .container {
             margin: 0px auto;
             width: 380px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include d-flex(center,center,column);
             .carruselImagenes {
                 padding-top: 20px;
                 width: 340px;
@@ -55,7 +49,7 @@
                 width: 250px;
                 text-align: center;
                 font-weight: bold;
-                font-size: $parrafos;
+                font-size: map-get($sizes, parrafos );
             }
             .precio {
                 text-align: center;
@@ -77,15 +71,11 @@
     .section2 {
         grid-area: section2;
         width: 100%;
-        display: flex;
+        @include d-flex(center,center,row);
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         .container2 {
             position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include d-flex(center,center,column);
             padding: 0px 10px;
             margin: 0 40px;
         }
@@ -94,11 +84,20 @@
             height: 580px;
             padding-top: 30px;
         }
+        .nombre {
+            padding-top: 12px;
+            width: 250px;
+            text-align: center;
+            font-weight: bold;
+            font-size: map-get($sizes, parrafos );
+        }
+        .precio {
+            text-align: center;
+            font-size: $parrafos;
+        }
     }
     .botonvertodo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include d-flex(center,center,row);
         margin: 30px;
         #vertodo{
             font-size: 12px;
@@ -127,10 +126,9 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        @include d-flex(space-evenly,center,row);
         .container__ubi {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include d-flex(center,center,column);
             text-align: center;
             height: 100%;
             h3 {
@@ -146,9 +144,7 @@
             }
         }
         .container__contactform {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include d-flex(center,stretch,column);
             height: 600px;
             width: 700px;
             text-align: center;
@@ -187,8 +183,7 @@
                 }
             }
             .contact__buttom {
-                display: flex;
-                justify-content: center;
+                @include d-flex(center,center,row);
                 input {
                     width: 140px;
                     height: 30px;

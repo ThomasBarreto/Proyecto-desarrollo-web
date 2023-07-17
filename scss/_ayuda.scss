@@ -1,12 +1,11 @@
 /*AYUDA*/
 
 .titulo__ayuda{
-    display: flex;
-    justify-content: center;
+    @include d-flex(center,center, row);
     background-color: #ccc;
     border-top: 2px solid black;
     h1{
-        font-size: $titulos;
+        font-size: map-get($sizes, titulos );
         font-weight: bold;
         text-transform: uppercase;
         padding-top: 20px;
@@ -21,10 +20,7 @@
     justify-items: center;
     background-color: #ccc;
     .imagenayuda {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
+        @include d-flex(center,center,column-reverse);
         flex-wrap: wrap;
         text-align: center;
         a {
@@ -32,6 +28,7 @@
             color: white;
             p {
                 width: 200px;
+                font-size: map-get($sizes, parrafos );
                 background-color: black;
                 margin-top: 10px;
                 padding: 10px 0px;

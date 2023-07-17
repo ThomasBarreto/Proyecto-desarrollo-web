@@ -2,3 +2,22 @@
 $titulos:25px;
 $subtitulos:22px;
 $parrafos:14px;
+
+$sizes:(
+    titulos: 25px,
+    subtitulos: 22px,
+    parrafos: 14px
+);
+
+
+@mixin d-flex ($jcontent,$aitems,$direccion){
+    display: flex;
+    justify-content: $jcontent;
+    align-items: $aitems;
+    flex-direction: $direccion;
+}
+
+
+
+
+

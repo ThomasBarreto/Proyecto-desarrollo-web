@@ -5,28 +5,22 @@
     background-color: #0000000f;
     width: 100%;
     height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include d-flex(center,center,row);
     border-top: 2px solid black;
     .contactform2 {
         border: 2px solid black;
         border-radius: 10px;
         width: 700px;
         padding: 20px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include d-flex(center,center,column);
         h1 {
             font-weight: bold;
-            font-size: $titulos;
+            font-size: map-get($sizes, titulos );
             text-transform: uppercase;
         }
         .contactform2__titulo {
             width: 300px;
-            display: flex;
-            justify-content: space-between;
+            @include d-flex(space-between,center,row);
             padding: 10px;
             a {
                 text-decoration: none;
@@ -35,7 +29,7 @@
                     scale: 1.01;
                 }
                 p{
-                    font-size:$parrafos;
+                    font-size:map-get($sizes, parrafos );
                     font-weight: bold;
                 }
             }
@@ -47,9 +41,7 @@
                 font-weight: bold;
                 color: black;
                 width: 100%;
-                border-top: none;
-                border-right: none;
-                border-left: none;
+                border: none;
                 background: none;
                 padding: 20px 4px;
                 border-bottom: 2px solid black;
@@ -61,12 +53,10 @@
                 font-weight: bold;
                 color: black;
                 width: 100%;
-                height: 100px;
-                border-right: none;
-                border-left: none;
-                border-top: none;
+                height: 180px;
                 background: none;
                 padding: 10px 4px;
+                border: none;
                 border-bottom: 2px solid black;
             }
         }

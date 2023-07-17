@@ -144,9 +144,9 @@ header .carrito_responsive .btn {
 .main__index .titulo {
   margin-top: 60px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .main__index .titulo h1 {
   padding: 8px;
@@ -172,9 +172,9 @@ header .carrito_responsive .btn {
   margin: 0px auto;
   width: 380px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .main__index .section1 .container .carruselImagenes {
   padding-top: 20px;
@@ -204,15 +204,17 @@ header .carrito_responsive .btn {
   grid-area: section2;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .main__index .section2 .container2 {
   position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0px 10px;
   margin: 0 40px;
 }
@@ -221,10 +223,22 @@ header .carrito_responsive .btn {
   height: 580px;
   padding-top: 30px;
 }
+.main__index .section2 .nombre {
+  padding-top: 12px;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+.main__index .section2 .precio {
+  text-align: center;
+  font-size: 14px;
+}
 .main__index .botonvertodo {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   margin: 30px;
 }
 .main__index .botonvertodo #vertodo {
@@ -253,11 +267,16 @@ header .carrito_responsive .btn {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }
 .main__index .container__contact-ubi .container__ubi {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   height: 100%;
 }
@@ -274,8 +293,9 @@ header .carrito_responsive .btn {
 }
 .main__index .container__contact-ubi .container__contactform {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
   height: 600px;
   width: 700px;
   text-align: center;
@@ -313,6 +333,8 @@ header .carrito_responsive .btn {
 .main__index .container__contact-ubi .container__contactform .contact__buttom {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .main__index .container__contact-ubi .container__contactform .contact__buttom input {
   width: 140px;
@@ -354,6 +376,7 @@ footer .cookies a {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .mainzapatillas .container-fluid .imgbanner__zapas {
@@ -371,10 +394,11 @@ footer .cookies a {
   font-size: 25px;
 }
 .mainzapatillas .section__container {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: start;
+  flex-direction: row;
 }
 .mainzapatillas .section__container .filtros__responsive {
   display: none;
@@ -451,9 +475,9 @@ footer .cookies a {
 }
 .mainzapatillas .section__container .article__zapatillas .contenidoimagen {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 10px;
   margin: 0 auto;
 }
@@ -463,7 +487,7 @@ footer .cookies a {
 }
 .mainzapatillas .section__container .article__zapatillas .contenidoimagen .nombrezapas {
   padding: 10px;
-  width: 280px;
+  width: 250px;
   height: 40px;
   font-size: 14px;
   font-weight: bold;
@@ -477,6 +501,8 @@ footer .cookies a {
 .titulo__ayuda {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   background-color: #ccc;
   border-top: 2px solid black;
 }
@@ -498,9 +524,9 @@ footer .cookies a {
 }
 .ayudacontainer .imagenayuda {
   display: flex;
-  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -510,6 +536,7 @@ footer .cookies a {
 }
 .ayudacontainer .imagenayuda a p {
   width: 200px;
+  font-size: 14px;
   background-color: black;
   margin-top: 10px;
   padding: 10px 0px;
@@ -596,6 +623,7 @@ footer .cookies a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   border-top: 2px solid black;
 }
 .container__contactform2 .contactform2 {
@@ -604,9 +632,9 @@ footer .cookies a {
   width: 700px;
   padding: 20px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .container__contactform2 .contactform2 h1 {
   font-weight: bold;
@@ -617,6 +645,8 @@ footer .cookies a {
   width: 300px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   padding: 10px;
 }
 .container__contactform2 .contactform2 .contactform2__titulo a {
@@ -638,9 +668,7 @@ footer .cookies a {
   font-weight: bold;
   color: black;
   width: 100%;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border: none;
   background: none;
   padding: 20px 4px;
   border-bottom: 2px solid black;
@@ -652,12 +680,10 @@ footer .cookies a {
   font-weight: bold;
   color: black;
   width: 100%;
-  height: 100px;
-  border-right: none;
-  border-left: none;
-  border-top: none;
+  height: 180px;
   background: none;
   padding: 10px 4px;
+  border: none;
   border-bottom: 2px solid black;
 }
 .container__contactform2 .contactform2 .contact__button2 button {

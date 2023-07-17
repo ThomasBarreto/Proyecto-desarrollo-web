@@ -2,9 +2,7 @@
 
 .mainzapatillas{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @include d-flex(center,center,column);
     .container-fluid{
         .imgbanner__zapas {
             background-image: url(../img/Banners/banner-zapatillas.jpg);
@@ -22,10 +20,8 @@
         font-size: $titulos;
     }
     .section__container {
-        display: flex;
         width: 100%;
-        justify-content: center;
-        align-items: start;
+        @include d-flex(center,start,row);
         .filtros__responsive {
             display: none;
             .btn {
@@ -105,10 +101,7 @@
             flex-wrap: wrap;
             text-align: center;
             .contenidoimagen {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                @include d-flex(center,center,column);
                 padding: 10px;
                 margin: 0 auto;
                 img {
@@ -117,13 +110,13 @@
                 }
                 .nombrezapas {
                     padding:10px;
-                    width: 280px;
+                    width: 250px;
                     height: 40px;
-                    font-size: $parrafos;
+                    font-size: map-get($sizes, parrafos);
                     font-weight: bold;
                 }
                 .preciozapas {
-                    font-size:$parrafos;
+                    font-size:map-get($sizes, parrafos);
                     margin-bottom: 8px;
                 }
             }
