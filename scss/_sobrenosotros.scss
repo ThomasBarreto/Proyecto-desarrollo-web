@@ -15,18 +15,20 @@
     justify-content: center;
     align-items: center;
     h1{
-        font-size: $titulos;
+        font-size: map-get($sizes, titulos );
         font-weight: bold;
         text-transform: uppercase;
     }
 }
-.sobrenosotros__p {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-    margin: 15px 55px;
+.container__sobrenosotros{
+    @include d-flex (center,center,row);
+    margin: 0 auto;
+    .infosobrenosotros{
+        text-align: center;
+        width: 90%;
+        font-size: map-get($sizes, parrafos);
+        padding: 20px;
+    }
 }
 .containerimagenessobrenosotros{
     width: 100%;
@@ -40,24 +42,32 @@
         }
     }
 
+.diasyhorarios{
+    @include d-flex(center,center,row);
+    width:25%;
+    margin: 40px auto;
+    p{
+        text-align: center;
+        line-height: 30px;
+        font-size: map-get($sizes, $subtitulos );
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 40px;
+    }
+}
+
 .container__ubisobrenosotros {
     width: 100%;
-    margin-top: 40px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include d-flex (center,center,column);
     h2 {
         font-weight: bold;
-        font-size: 30px;
+        font-size: map-get($sizes, titulos );
     }
     .container__iframe {
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include d-flex(center,center,row);
         iframe {
             width: 100%;
             padding: 30px;

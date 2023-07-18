@@ -18,8 +18,8 @@
             ul {
             display: none;
             li {
-                font-size: 12px;
-                font-weight: 700;
+                font-size: map-get($sizes, parrafos );
+                font-weight: bold;
             }
         }
         .icono {
@@ -93,11 +93,11 @@
                         flex-wrap: wrap;
                         .descripcion__nombre {
                             font-weight: bold;
-                            font-size: 14px;
+                            font-size: map-get($sizes, parrafos );
                             margin: 0px 5px;
                         }
                         .descripcion__precio {
-                            font-size: 14px;
+                            font-size: map-get($sizes, parrafos );
                             margin: 10px 5px;
                             font-weight: bold;
                         }
@@ -110,7 +110,7 @@
                         grid-area: inputcant;
                         input {
                             text-align: center;
-                            font-size: 12px;
+                            font-size: map-get($sizes, parrafos );
                             width: 80px;
                             height: 30px;
                             padding: 2px;
@@ -161,7 +161,7 @@
         .titulo {
             margin-top: 25px;
             h2 {
-                font-size: $subtitulos;
+                font-size: map-get($sizes, subtitulos );
                 text-align: center;
             }
         } 
@@ -171,17 +171,18 @@
             .container2 {
                 text-align: center;
                 width:180px;
-                margin: 0 auto;
+                margin: 20px auto;
+                
                 .carruselImagenes2 {
                     width: 170px;
                     height: 300px;
                 }
                 .nombre {
-                    font-size: $parrafos;
+                    font-size: map-get($sizes, parrafos );
                     width: 80%;
                 }
                 .precio {
-                    font-size: $parrafos;
+                    font-size: map-get($sizes, parrafos );
                     width: 80%;
                 }
             }
@@ -210,7 +211,6 @@
             }
             .container__contactform {
                 display: flex;
-                height: 400px;
                 flex-direction: column;
                 width: 100%;
                 .titulo__contacto {
@@ -218,7 +218,7 @@
                     flex-direction: column;
                     align-items: center;
                     padding: 20px;
-                    font-size: 15px;
+                    font-size: map-get($sizes, subtitulos);
                     a{
                         h3 {
                             color: black;
@@ -249,7 +249,7 @@
             padding: 0px 10px;
         }
         .cookies {
-            font-size: 18px;
+            font-size: map-get($sizes, parrafos );
             padding: 0px 2px;
         }
     }
@@ -278,13 +278,13 @@
                 color: black;
                 .buttonfiltros{
                     font-weight: bold;
-                    margin-right: 20px;
                     color: black;
-                    font-size: 14px;
-                    padding: 10px 15px;
+                    font-size: map-get($sizes, parrafos);
+                    padding: 8px 15px;
                     border: 1px solid black;
                     border-radius: 2px;
-                    box-shadow: none;
+                    background-color: white;
+                    margin-right: 10px;
                 }
                 .container__marcas {
                     display: flex;
@@ -318,15 +318,7 @@
                     }
                 }
                 .deshacer{
-                    font-weight: bold;
-                    margin-right: 20px;
-                    color: black;
-                    font-size: 14px;
-                    padding: 10px 15px;
-                    border: 1px solid black;
-                    border-radius: 2px;
-                    box-shadow: none;
-                    background-color: white;
+                    @extend .buttonfiltros;
                 }
             }
             .article__zapatillas {
@@ -348,10 +340,10 @@
                         padding-top: 10px;
                         width: 180px;
                         height: 30px;
-                        font-size: 12px;
                     }
                     .preciozapas{
                         width: 80px;
+
                     }
                 }
             }
@@ -380,7 +372,7 @@
             a{
                 p {
                     width: 160px;
-                    font-size: 12px;
+                    font-size: map-get($sizes, parrafos);
                 }
             }
         }
@@ -394,7 +386,7 @@
         }
     }
     .sobrenosotros__p {
-        font-size: 15px;
+        font-size: map-get($sizes, parrafos);
         width: 100%;
         margin: 0 auto;
         padding: 20px;
@@ -411,9 +403,14 @@
             height: 500px;
         }
     }
+
+    .diasyhorarios{
+        width: 70%;
+    }
+
     .container__ubisobrenosotros {
         h2 {
-            font-size: 25px;
+            font-size: map-get($sizes,titulos);
             margin-top: 10px;
         }
         .container__iframe{
@@ -430,25 +427,16 @@
         width: 100%;
         .contactform2 {
             width: 90%;
-            height: 400px;
             justify-content: space-around;
             h3 {
-                font-size: 25px;
+                font-size: map-get($sizes, titulos);
             }
             .contactform2__titulo{
                 a{
                     p {
-                        font-size: 12px;
+                        font-size: map-get($sizes, parrafos);
                     }
                 }
-            }
-            .contact__button2 button {
-                width: 100px;
-                height: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 12px;
             }
         }
     }

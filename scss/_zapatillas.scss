@@ -17,7 +17,7 @@
         margin: 40px 0px;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: $titulos;
+        font-size: map-get($sizes, titulos);
     }
     .section__container {
         width: 100%;
@@ -37,14 +37,14 @@
             .container__filtros {
                 padding-bottom: 25px;
                 h2{
-                    font-size: $subtitulos;
+                    font-size: map-get($sizes, subtitulos);
                     font-weight: bold;
                     text-transform: uppercase;
                 }
             }
             .container__marcas{
                 h3{
-                    font-size: $subtitulos;
+                    font-size: map-get($sizes, subtitulos);
                     font-weight: bold;
                 }
                 ul {
@@ -52,12 +52,12 @@
                     list-style: none;
                 }
                 li{
-                    font-size: $parrafos;
+                    font-size: map-get($sizes, parrafos);
                 }
             } 
             .container__talles {
                 h3{
-                    font-size: $subtitulos;
+                    font-size: map-get($sizes, subtitulos);
                     font-weight: bold;
                 }
                 ul {
@@ -65,12 +65,12 @@
                     list-style: none;
                 }
                 li{
-                    font-size: $parrafos;
+                    font-size: map-get($sizes, parrafos);
                 }
             } 
             .container__precio{
                 h3{
-                    font-size: $subtitulos;
+                    font-size: map-get($sizes, subtitulos);
                     font-weight: bold;
                 }
                 ul {
@@ -78,7 +78,7 @@
                     list-style: none;
                 }
                 li{
-                    font-size: $parrafos;
+                    font-size: map-get($sizes, parrafos);
                 }
             } 
             .deshacer {
@@ -86,7 +86,7 @@
                 border: 1px solid black;
                 border-radius: 5px;
                 background-color: white;
-                font-size: $parrafos;
+                font-size: map-get($sizes, parrafos);
                 &:hover{
                     scale: 1.02;
                 }
@@ -106,7 +106,8 @@
                 margin: 0 auto;
                 img {
                     width: 300px;
-                    border-radius: 3px;
+                    border-radius: 2px;
+                    @include imagen;
                 }
                 .nombrezapas {
                     padding:10px;

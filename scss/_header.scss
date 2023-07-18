@@ -14,20 +14,30 @@ header{
         }
     }
     .navbar__ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include d-flex (center,center,row);
         list-style: none;
         li{
             padding: 12px;
-            &:hover{
-                font-weight: bold;
-                scale: 1.1;
-            }
             a {
                 color: black;
                 text-decoration: none;
-                padding: 0px 25px;
+                font-size: map-get($sizes, parrafos );
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -3px; 
+                    left: 0;
+                    width: 100%;
+                    height: 2px; 
+                    background-color: #ccc; 
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 0.2s ease ; 
+                }
+                &:hover::after {
+                    transform: scaleX(1); 
+                }
             }
         }
     }
@@ -36,11 +46,15 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
+        button{
+            border: none;
+        }
         .fa-solid {
             font-size: 19px;
             color: black;
             padding: 0px 18px;
             margin-bottom: 13px;
+            border: none;
             &:hover {
                 scale: 1.1;
             }
@@ -74,13 +88,12 @@ header{
                     flex-wrap: wrap;
                     .descripcion__nombre {
                         font-weight: bold;
-                        font-size: 14px;
+                        font-size: map-get($sizes, parrafos );
                         margin: 0px 5px;
                     }
                     .descripcion__precio {
-                        font-size: 14px;
+                        font-size: map-get($sizes, parrafos );
                         margin: 10px 5px;
-                        font-weight: bold;
                     }
                 }
                 .inputcantidad {
@@ -91,7 +104,7 @@ header{
                     grid-area: inputcant;
                     input {
                         text-align: center;
-                        font-size: 12px;
+                        font-size: map-get($sizes, parrafos );
                         width: 80px;
                         height: 30px;
                         padding: 2px;

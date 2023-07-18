@@ -1,4 +1,7 @@
-/*IMPORT SCSS*/ /*VARIABLES*/ /*HEADER*/
+/*IMPORT SCSS*/ /*VARIABLES*/
+/* MAPS */
+/* MIXINS */
+/*HEADER*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
 header {
   grid-area: header;
@@ -18,19 +21,32 @@ header .navbar__ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   list-style: none;
 }
 header .navbar__ul li {
   padding: 12px;
 }
-header .navbar__ul li:hover {
-  font-weight: bold;
-  scale: 1.1;
-}
 header .navbar__ul li a {
   color: black;
   text-decoration: none;
-  padding: 0px 25px;
+  font-size: 14px;
+  position: relative;
+}
+header .navbar__ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+header .navbar__ul li a:hover::after {
+  transform: scaleX(1);
 }
 header .icono {
   margin-right: 240px;
@@ -38,11 +54,15 @@ header .icono {
   align-items: center;
   justify-content: center;
 }
+header .icono button {
+  border: none;
+}
 header .icono .fa-solid {
   font-size: 19px;
   color: black;
   padding: 0px 18px;
   margin-bottom: 13px;
+  border: none;
 }
 header .icono .fa-solid:hover {
   scale: 1.1;
@@ -85,7 +105,6 @@ header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripci
 header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__precio {
   font-size: 14px;
   margin: 10px 5px;
-  font-weight: bold;
 }
 header .icono .offcanvas-body .container__carrito .inputcantidad {
   display: flex;
@@ -96,7 +115,7 @@ header .icono .offcanvas-body .container__carrito .inputcantidad {
 }
 header .icono .offcanvas-body .container__carrito .inputcantidad input {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   width: 80px;
   height: 30px;
   padding: 2px;
@@ -171,19 +190,24 @@ header .carrito_responsive .btn {
 .main__index .section1 .container {
   margin: 0px auto;
   width: 380px;
+  padding: 20px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .main__index .section1 .container .carruselImagenes {
-  padding-top: 20px;
   width: 340px;
   height: 450px;
 }
+.main__index .section1 .container .carruselImagenes:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
 .main__index .section1 .container .nombre {
-  padding-top: 12px;
+  padding: 10px;
   width: 250px;
+  height: 50px;
   text-align: center;
   font-weight: bold;
   font-size: 14px;
@@ -196,9 +220,10 @@ header .carrito_responsive .btn {
   display: none;
 }
 .main__index .titulo h2 {
+  padding: 8px;
+  text-transform: uppercase;
   font-size: 25px;
   font-weight: bold;
-  text-transform: uppercase;
 }
 .main__index .section2 {
   grid-area: section2;
@@ -217,11 +242,15 @@ header .carrito_responsive .btn {
   flex-direction: column;
   padding: 0px 10px;
   margin: 0 40px;
+  margin-top: 40px;
 }
 .main__index .section2 .carruselImagenes2 {
   width: 440px;
   height: 580px;
-  padding-top: 30px;
+}
+.main__index .section2 .carruselImagenes2:hover {
+  transform: scale(1.01);
+  cursor: pointer;
 }
 .main__index .section2 .nombre {
   padding-top: 12px;
@@ -242,27 +271,25 @@ header .carrito_responsive .btn {
   margin: 30px;
 }
 .main__index .botonvertodo #vertodo {
-  font-size: 12px;
-  width: 80px;
+  font-weight: bold;
+  color: black;
+  padding: 8px 15px;
   border: 1px solid black;
-  padding: 5px;
+  border-radius: 2px;
   background-color: white;
-  border-radius: 5px;
+  margin-right: 10px;
 }
 .main__index .botonvertodo #vertodo:hover {
-  scale: 1.03;
+  scale: 1.05;
 }
 .main__index .botonvertodo #vertodo a {
   text-decoration: none;
+  font-size: 14px;
   color: black;
   font-weight: bold;
 }
 .main__index .container__contact-ubi {
   grid-area: section3;
-  background-image: url(../img/SneakerSobrenosotros.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   height: 600px;
   display: flex;
   justify-content: space-evenly;
@@ -285,6 +312,7 @@ header .carrito_responsive .btn {
   font-size: 25px;
   color: black;
   padding: 12px;
+  text-transform: uppercase;
 }
 .main__index .container__contact-ubi .container__ubi iframe {
   width: 550px;
@@ -300,35 +328,60 @@ header .carrito_responsive .btn {
   width: 700px;
   text-align: center;
 }
-.main__index .container__contact-ubi .container__contactform .titulo__contacto h3 {
+.main__index .container__contact-ubi .container__contactform .titulo__contacto a {
+  text-decoration: none;
+  position: relative;
+}
+.main__index .container__contact-ubi .container__contactform .titulo__contacto a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -100px;
+  width: 60%;
+  height: 2px;
+  background-color: #ccc;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.main__index .container__contact-ubi .container__contactform .titulo__contacto a:hover::after {
+  transform: scaleX(1);
+}
+.main__index .container__contact-ubi .container__contactform .titulo__contacto a h3 {
   font-size: 25px;
+  text-transform: uppercase;
   color: black;
   padding: 12px;
 }
-.main__index .container__contact-ubi .container__contactform .titulo__contacto a {
-  text-decoration: none;
+.main__index .container__contact-ubi .container__contactform .titulo__contacto .separacion {
+  width: 50px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.301);
 }
 .main__index .container__contact-ubi .container__contactform .contact__form input {
   color: white;
   background-color: black;
   opacity: 0.6;
-  width: 100%;
-  height: 38px;
+  width: 80%;
+  height: 50px;
   padding: 5px;
-  margin: 3px 0;
+  margin: 5px 0;
   border-style: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .main__index .container__contact-ubi .container__contactform .contact__form textarea {
   color: white;
   background-color: black;
   opacity: 0.6;
-  width: 100%;
-  height: 60px;
+  width: 80%;
+  height: 80px;
   padding: 5px;
-  margin: 3px 0;
+  margin: 5px 0;
   border-style: none;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+.main__index .container__contact-ubi .container__contactform .contact__form ::placeholder {
+  color: white;
 }
 .main__index .container__contact-ubi .container__contactform .contact__buttom {
   display: flex;
@@ -336,14 +389,17 @@ header .carrito_responsive .btn {
   align-items: center;
   flex-direction: row;
 }
-.main__index .container__contact-ubi .container__contactform .contact__buttom input {
-  width: 140px;
-  height: 30px;
+.main__index .container__contact-ubi .container__contactform .contact__buttom button {
+  width: 50%;
+  height: 50px;
   background-color: black;
   opacity: 0.6;
   color: white;
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+.main__index .container__contact-ubi .container__contactform .contact__buttom button:hover {
+  scale: 1.03;
 }
 
 /*INDEX FOOTER*/
@@ -483,7 +539,11 @@ footer .cookies a {
 }
 .mainzapatillas .section__container .article__zapatillas .contenidoimagen img {
   width: 300px;
-  border-radius: 3px;
+  border-radius: 2px;
+}
+.mainzapatillas .section__container .article__zapatillas .contenidoimagen img:hover {
+  transform: scale(1.01);
+  cursor: pointer;
 }
 .mainzapatillas .section__container .article__zapatillas .contenidoimagen .nombrezapas {
   padding: 10px;
@@ -568,13 +628,18 @@ footer .cookies a {
   text-transform: uppercase;
 }
 
-.sobrenosotros__p {
-  font-size: 18px;
+.container__sobrenosotros {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.container__sobrenosotros .infosobrenosotros {
   text-align: center;
-  margin: 15px 55px;
+  width: 90%;
+  font-size: 14px;
+  padding: 20px;
 }
 
 .containerimagenessobrenosotros {
@@ -589,18 +654,33 @@ footer .cookies a {
   height: 700px;
 }
 
-.container__ubisobrenosotros {
-  width: 100%;
-  margin-top: 40px;
-  text-align: center;
+.diasyhorarios {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  width: 25%;
+  margin: 40px auto;
+}
+.diasyhorarios p {
+  text-align: center;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.container__ubisobrenosotros {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .container__ubisobrenosotros h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
 }
 .container__ubisobrenosotros .container__iframe {
   width: 100%;
@@ -608,6 +688,7 @@ footer .cookies a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 .container__ubisobrenosotros .container__iframe iframe {
   width: 100%;
@@ -651,14 +732,27 @@ footer .cookies a {
 }
 .container__contactform2 .contactform2 .contactform2__titulo a {
   text-decoration: none;
-  color: black;
+  position: relative;
 }
-.container__contactform2 .contactform2 .contactform2__titulo a:hover {
-  scale: 1.01;
+.container__contactform2 .contactform2 .contactform2__titulo a::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.container__contactform2 .contactform2 .contactform2__titulo a:hover::after {
+  transform: scaleX(1);
 }
 .container__contactform2 .contactform2 .contactform2__titulo a p {
   font-size: 14px;
   font-weight: bold;
+  color: black;
 }
 .container__contactform2 .contactform2 .contact__form2 {
   display: flex;
@@ -686,12 +780,19 @@ footer .cookies a {
   border: none;
   border-bottom: 2px solid black;
 }
+.container__contactform2 .contactform2 .contact__button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
 .container__contactform2 .contactform2 .contact__button2 button {
   font-weight: bold;
   background: none;
   padding: 12px;
   margin-top: 20px;
-  width: 180px;
+  width: 80%;
   border-radius: 10px;
   border: 2px solid black;
 }
@@ -720,8 +821,8 @@ footer .cookies a {
     display: none;
   }
   header .navbar ul li {
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: bold;
   }
   header .icono {
     display: none;
@@ -815,7 +916,7 @@ footer .cookies a {
   }
   header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad input {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     width: 80px;
     height: 30px;
     padding: 2px;
@@ -868,7 +969,7 @@ footer .cookies a {
   .main__index .section2 .container2 {
     text-align: center;
     width: 180px;
-    margin: 0 auto;
+    margin: 20px auto;
   }
   .main__index .section2 .container2 .carruselImagenes2 {
     width: 170px;
@@ -907,7 +1008,6 @@ footer .cookies a {
   }
   .main__index .container__contact-ubi .container__contactform {
     display: flex;
-    height: 400px;
     flex-direction: column;
     width: 100%;
   }
@@ -916,7 +1016,7 @@ footer .cookies a {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    font-size: 15px;
+    font-size: 22px;
   }
   .main__index .container__contact-ubi .container__contactform .titulo__contacto a h3 {
     color: black;
@@ -939,7 +1039,7 @@ footer .cookies a {
     padding: 0px 10px;
   }
   footer .cookies {
-    font-size: 18px;
+    font-size: 14px;
     padding: 0px 2px;
   }
   /*ZAPATILLAS*/
@@ -963,15 +1063,15 @@ footer .cookies a {
     align-items: center;
     color: black;
   }
-  .mainzapatillas .section__container .filtros__responsive .buttonfiltros {
+  .mainzapatillas .section__container .filtros__responsive .buttonfiltros, .mainzapatillas .section__container .filtros__responsive .deshacer {
     font-weight: bold;
-    margin-right: 20px;
     color: black;
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 8px 15px;
     border: 1px solid black;
     border-radius: 2px;
-    box-shadow: none;
+    background-color: white;
+    margin-right: 10px;
   }
   .mainzapatillas .section__container .filtros__responsive .container__marcas {
     display: flex;
@@ -1004,17 +1104,6 @@ footer .cookies a {
   .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros {
     list-style: none;
   }
-  .mainzapatillas .section__container .filtros__responsive .deshacer {
-    font-weight: bold;
-    margin-right: 20px;
-    color: black;
-    font-size: 14px;
-    padding: 10px 15px;
-    border: 1px solid black;
-    border-radius: 2px;
-    box-shadow: none;
-    background-color: white;
-  }
   .mainzapatillas .section__container .article__zapatillas {
     width: 100%;
     display: flex;
@@ -1036,7 +1125,6 @@ footer .cookies a {
     padding-top: 10px;
     width: 180px;
     height: 30px;
-    font-size: 12px;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen .preciozapas {
     width: 80px;
@@ -1063,14 +1151,14 @@ footer .cookies a {
   }
   .ayudacontainer .imagenayuda a p {
     width: 160px;
-    font-size: 12px;
+    font-size: 14px;
   }
   /*SOBRE NOSOTROS*/
   .container-fluid .imgbanner__sobrenosotros {
     height: 60vh;
   }
   .sobrenosotros__p {
-    font-size: 15px;
+    font-size: 14px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -1087,6 +1175,9 @@ footer .cookies a {
     width: 100%;
     height: 500px;
   }
+  .diasyhorarios {
+    width: 70%;
+  }
   .container__ubisobrenosotros h2 {
     font-size: 25px;
     margin-top: 10px;
@@ -1101,22 +1192,13 @@ footer .cookies a {
   }
   .container__contactform2 .contactform2 {
     width: 90%;
-    height: 400px;
     justify-content: space-around;
   }
   .container__contactform2 .contactform2 h3 {
     font-size: 25px;
   }
   .container__contactform2 .contactform2 .contactform2__titulo a p {
-    font-size: 12px;
-  }
-  .container__contactform2 .contactform2 .contact__button2 button {
-    width: 100px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
+    font-size: 14px;
   }
   /*OFF CANVAS BACKDROP*/
   .offcanvas-backdrop {

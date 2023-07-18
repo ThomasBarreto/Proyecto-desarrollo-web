@@ -24,13 +24,26 @@
             padding: 10px;
             a {
                 text-decoration: none;
-                color: black;
-                &:hover{
-                    scale: 1.01;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 10px; 
+                    left: 0px;
+                    width: 100%;
+                    height: 2px; 
+                    background-color: #ccc; 
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 0.2s ease ; 
+                }
+                &:hover::after {
+                    transform: scaleX(1); 
                 }
                 p{
                     font-size:map-get($sizes, parrafos );
                     font-weight: bold;
+                    color: black;
                 }
             }
         }
@@ -60,16 +73,20 @@
                 border-bottom: 2px solid black;
             }
         }
-        .contact__button2 button {
-            font-weight: bold;
-            background: none;
-            padding: 12px;
-            margin-top: 20px;
-            width: 180px;
-            border-radius: 10px;
-            border: 2px solid black;
-            &:hover{
-                scale: 1.03;
+        .contact__button2{
+            @include d-flex(center,center,row);
+            width: 100%;
+            button {
+                font-weight: bold;
+                background: none;
+                padding: 12px;
+                margin-top: 20px;
+                width: 80%;
+                border-radius: 10px;
+                border: 2px solid black;
+                &:hover{
+                    scale: 1.03;
+                }
             }
         }
     }

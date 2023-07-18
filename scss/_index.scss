@@ -38,22 +38,24 @@
         .container {
             margin: 0px auto;
             width: 380px;
+            padding: 20px 0px;
             @include d-flex(center,center,column);
             .carruselImagenes {
-                padding-top: 20px;
                 width: 340px;
                 height: 450px;
+                @include imagen;
             }
             .nombre {
-                padding-top: 12px;
+                padding: 10px;
                 width: 250px;
+                height: 50px;
                 text-align: center;
                 font-weight: bold;
                 font-size: map-get($sizes, parrafos );
             }
             .precio {
                 text-align: center;
-                font-size: $parrafos;
+                font-size:map-get($sizes, parrafos );
             }
         }
     }
@@ -63,9 +65,10 @@
 
     .titulo{
         h2{
-            font-size: $titulos;
-            font-weight: bold;
+            padding: 8px;
             text-transform: uppercase;
+            font-size:  map-get($sizes, titulos);
+            font-weight: bold;
         }
     }
     .section2 {
@@ -78,11 +81,12 @@
             @include d-flex(center,center,column);
             padding: 0px 10px;
             margin: 0 40px;
+            margin-top: 40px;
         }
         .carruselImagenes2 {
             width: 440px;
             height: 580px;
-            padding-top: 30px;
+            @include imagen;
         }
         .nombre {
             padding-top: 12px;
@@ -93,24 +97,26 @@
         }
         .precio {
             text-align: center;
-            font-size: $parrafos;
+            font-size: map-get($sizes, parrafos );
         }
     }
     .botonvertodo{
         @include d-flex(center,center,row);
         margin: 30px;
         #vertodo{
-            font-size: 12px;
-            width: 80px;
+            font-weight: bold;
+            color: black;
+            padding: 8px 15px;
             border: 1px solid black;
-            padding: 5px;
+            border-radius: 2px;
             background-color: white;
-            border-radius: 5px;
+            margin-right: 10px;
             &:hover{
-                scale: 1.03;
+                scale: 1.05;
             }
             a {
                 text-decoration: none;
+                font-size: map-get($sizes, parrafos );
                 color: black;
                 font-weight: bold;
             }
@@ -118,10 +124,6 @@
     }
     .container__contact-ubi{
         grid-area: section3;
-        background-image: url(../img/SneakerSobrenosotros.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 600px;
         display: flex;
         justify-content: space-evenly;
@@ -133,9 +135,10 @@
             height: 100%;
             h3 {
                 width: 100%;
-                font-size: 25px;
+                font-size: map-get($sizes, titulos );
                 color: black;
                 padding: 12px;
+                text-transform: uppercase;
             }
             iframe {
                 width: 550px;
@@ -149,13 +152,35 @@
             width: 700px;
             text-align: center;
             .titulo__contacto{
-                h3 {
-                    font-size: 25px;
-                    color: black;
-                    padding: 12px;
-                }
                 a {
                     text-decoration: none;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -1px; 
+                        left: -100px;
+                        width: 60%;
+                        height: 2px; 
+                        background-color: #ccc; 
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: transform 0.2s ease ; 
+                    }
+                    &:hover::after {
+                        transform: scaleX(1); 
+                    }
+                    h3 {
+                        font-size: map-get($sizes, titulos );
+                        text-transform: uppercase;
+                        color: black;
+                        padding: 12px;
+                    }
+                }
+                .separacion {
+                    width: 50px;
+                    height: 3px;
+                    background-color: rgba(0, 0, 0, 0.301);
                 }
             }
             .contact__form{
@@ -163,35 +188,41 @@
                     color: white;
                     background-color: black;
                     opacity: 0.6;
-                    width: 100%;
-                    height: 38px;
+                    width: 80%;
+                    height: 50px;
                     padding: 5px;
-                    margin: 3px 0;
+                    margin: 5px 0;
                     border-style: none;
-                    border-radius: 5px;
+                    border-radius: 10px;
                 }
                 textarea {
                     color: white;
                     background-color: black;
                     opacity: 0.6;
-                    width: 100%;
-                    height: 60px;
+                    width: 80%;
+                    height: 80px;
                     padding: 5px;
-                    margin: 3px 0;
+                    margin: 5px 0;
                     border-style: none;
-                    border-radius: 5px;
+                    border-radius: 10px;
+                }
+                ::placeholder{
+                    color: white;
                 }
             }
             .contact__buttom {
                 @include d-flex(center,center,row);
-                input {
-                    width: 140px;
-                    height: 30px;
+                button {
+                    width: 50%;
+                    height: 50px;
                     background-color: black;
                     opacity: 0.6;
                     color: white;
                     border: 2px solid black;
-                    border-radius: 5px;
+                    border-radius: 10px;
+                    &:hover{
+                        scale: 1.03;
+                    }
                 }
             }
         }
