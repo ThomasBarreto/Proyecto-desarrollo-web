@@ -28,15 +28,13 @@
         }
     }
     .section1{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        margin: 0 auto;
-        padding: 20px 0;
-        column-gap: 80px;
-        justify-items: center;
-        align-content: center;
+        @include d-flex (center,center,row);
+        flex-wrap: wrap;
+        margin: 20px auto;
+        max-width: 1600px;
+        flex-wrap: wrap;
+        width: 100%;
         .container {
-            margin: 0px auto;
             width: 380px;
             padding: 20px 0px;
             @include d-flex(center,center,column);

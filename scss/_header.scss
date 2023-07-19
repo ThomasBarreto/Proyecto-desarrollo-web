@@ -2,12 +2,13 @@
 
 header{
     grid-area: header;
-    width: auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     .contenedorLogo{
-        margin-left: 240px;
+        @include d-flex(end,center,row);
+        width:20%;
         .contenedorLogo__logo{
             width: 140px;
             height: 140px;
@@ -15,6 +16,7 @@ header{
     }
     .navbar__ul{
         @include d-flex (center,center,row);
+        width: 100%;
         list-style: none;
         li{
             padding: 12px;
@@ -42,10 +44,8 @@ header{
         }
     }
     .icono{
-        margin-right: 240px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include d-flex(start,center,row);
+        width:20%;
         button{
             border: none;
         }

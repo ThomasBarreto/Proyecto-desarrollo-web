@@ -5,13 +5,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
 header {
   grid-area: header;
-  width: auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 header .contenedorLogo {
-  margin-left: 240px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
 }
 header .contenedorLogo .contenedorLogo__logo {
   width: 140px;
@@ -22,6 +26,7 @@ header .navbar__ul {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  width: 100%;
   list-style: none;
 }
 header .navbar__ul li {
@@ -49,10 +54,11 @@ header .navbar__ul li a:hover::after {
   transform: scaleX(1);
 }
 header .icono {
-  margin-right: 240px;
   display: flex;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  width: 20%;
 }
 header .icono button {
   border: none;
@@ -179,16 +185,17 @@ header .carrito_responsive .btn {
   background-color: rgba(0, 0, 0, 0.301);
 }
 .main__index .section1 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0 auto;
-  padding: 20px 0;
-  column-gap: 80px;
-  justify-items: center;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1600px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .main__index .section1 .container {
-  margin: 0px auto;
   width: 380px;
   padding: 20px 0px;
   display: flex;
@@ -648,10 +655,12 @@ footer .cookies a {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
+  column-gap: 20px;
 }
 .containerimagenessobrenosotros img {
-  width: 600px;
-  height: 700px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 5px 1px #ccc;
 }
 
 .diasyhorarios {
@@ -973,7 +982,7 @@ footer .cookies a {
   }
   .main__index .section2 .container2 .carruselImagenes2 {
     width: 170px;
-    height: 300px;
+    height: 230px;
   }
   .main__index .section2 .container2 .nombre {
     font-size: 14px;
