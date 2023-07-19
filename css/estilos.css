@@ -825,6 +825,7 @@ footer .cookies a {
   header .contenedorLogo {
     grid-area: logo;
     margin: 0px;
+    justify-content: center;
   }
   header .navbar ul {
     display: none;
