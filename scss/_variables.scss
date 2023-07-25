@@ -12,6 +12,13 @@ $sizes:(
 );
 
 
+$sizes-media:(
+    titulos: 20px,
+    subtitulos: 18px,
+    parrafos: 12px
+);
+
+
 /* MIXINS */
 @mixin d-flex ($jcontent,$aitems,$direccion){
     display: flex;

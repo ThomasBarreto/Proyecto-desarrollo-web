@@ -340,11 +340,12 @@
                     .nombrezapas{
                         padding-top: 10px;
                         width: 180px;
-                        height: 30px;
+                        height: 45px;
+                        font-size: map-get($sizes-media, parrafos );
                     }
                     .preciozapas{
                         width: 80px;
-
+                        font-size: map-get($sizes-media, parrafos );
                     }
                 }
             }
