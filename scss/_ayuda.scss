@@ -13,13 +13,15 @@
 }
 .ayudacontainer {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    align-content: center;
     justify-items: center;
+    row-gap: 20px;
     background-color: #ccc;
     .imagenayuda {
+        justify-self: center;
         @include d-flex(center,center,column-reverse);
         flex-wrap: wrap;
         text-align: center;
