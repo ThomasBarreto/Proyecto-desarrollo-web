@@ -136,6 +136,7 @@
         .titulo{
             h1{
                 text-align: center;
+                font-size: map-get($sizes-media, titulos );
             }
         }
         .section1 {
@@ -161,36 +162,44 @@
         .titulo {
             margin-top: 25px;
             h2 {
-                font-size: map-get($sizes, subtitulos );
+                font-size: map-get($sizes-media, titulos );
                 text-align: center;
             }
         } 
         .section2 {
             flex-direction: row;
             flex-wrap: wrap;
+            margin-top: 20px;
             .container2 {
                 text-align: center;
-                width:200px;
-                margin: 20px auto;
+                width:45%;
+                margin: 0px auto;
+                padding: 10px 0;
                 .carruselImagenes2 {
-                    width: 190px;
-                    height: 250px;
+                    width: 100%;
+                    height: 25%;
                 }
                 .nombre {
-                    font-size: map-get($sizes, parrafos );
+                    font-size: map-get($sizes-media, parrafos );
                     width: 100%;
-                    height: 60px;
+                    height: 40px;
+                    padding-top:20px;
                 }
                 .precio {
-                    font-size: map-get($sizes, parrafos );
+                    font-size: map-get($sizes-media, parrafos );
+                    padding: 2px;
                     width: 100%;
                 }
                 .botoncarrito{
                     width: 100%;
+                    padding: 10px;
                     @include d-flex(center,center,row);
                     button{
-                        width: 40px;
-                        height: 40px;
+                        width: 35px;
+                        height: 35px;
+                        i{
+                            font-size: map-get($sizes-media, parrafos);
+                        }
                         &:active{
                             scale: 1.03;
                             transform: rotateY(360deg);
@@ -215,6 +224,8 @@
                 align-items: center;
                 h3 {
                     color: black;
+                    font-size: map-get($sizes-media, titulos );
+                    font-weight: bold;
                 }
                 iframe {
                     width: 100%;
@@ -235,6 +246,8 @@
                     a{
                         h3 {
                             color: black;
+                            font-size: map-get($sizes-media, titulos );
+                            font-weight: bold;
                         }
                     }
                 }
@@ -274,6 +287,9 @@
                 height: 60vh;
             }
         }
+        .titulozapatillas{
+            font-size: map-get($sizes-media, titulos);
+        }
         .section__container {
             display: flex;
             flex-direction: column;
@@ -292,7 +308,7 @@
                 .buttonfiltros{
                     font-weight: bold;
                     color: black;
-                    font-size: map-get($sizes, parrafos);
+                    font-size: map-get($sizes-media, parrafos);
                     padding: 8px 15px;
                     border: 1px solid black;
                     border-radius: 2px;
@@ -331,41 +347,53 @@
                     }
                 }
                 .deshacer{
-                    @extend .buttonfiltros;
+                    font-weight: bold;
+                    color: black;
+                    font-size: map-get($sizes-media, parrafos);
+                    padding: 8px 15px;
+                    border: 1px solid black;
+                    border-radius: 2px;
+                    background-color: white;
+                    margin-right: 10px;
+                    font-size: map-get($sizes-media,parrafos);
                 }
             }
             .article__zapatillas {
                 width: 100%;
                 display: flex;
-                margin: 0px;
+                margin: 0px auto;
                 margin-bottom: 40px;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
                 .contenidoimagen{
-                    width:200px;
-                    padding: 10px;
+                    padding: 10px 0px;
+                    width:45%;
                     margin: 0 auto;
                     img{
-                        width: 190px;
-                        height: 250px;
+                        width: 100%;
+                        height: 25%;
                     }
                     .nombrezapas{
-                        padding-top: 10px;
-                        width: 180px;
-                        height: 45px;
                         font-size: map-get($sizes-media, parrafos );
+                        width: 100%;
+                        height: 60px;
+                        padding-top: 20px;
                     }
                     .preciozapas{
-                        width: 80px;
                         font-size: map-get($sizes-media, parrafos );
+                        padding: 2px;
+                        width: 100%;
                     }
                     .botoncarrito{
                         width: 100%;
                         @include d-flex(center,center,row);
                         button{
-                            width: 40px;
-                            height: 40px;
+                            width: 35px;
+                            height: 35px;
+                            i{
+                                font-size: map-get($sizes-media, parrafos );
+                            }
                             &:active{
                                 scale: 1.03;
                                 transform: rotateY(360deg);
@@ -380,9 +408,14 @@
 
     /*AYUDA*/
 
+    .titulo__ayuda{
+        h1{
+            font-size: map-get($sizes-media, titulos );
+        }
+    }
     .ayudacontainer {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: grid;
         align-items: center;
         justify-content: center;
@@ -413,8 +446,13 @@
             height: 60vh;
         }
     }
+    .titulo{
+        h1{
+            font-size: map-get($sizes-media, titulos );
+        }
+    }
     .sobrenosotros__p {
-        font-size: map-get($sizes, parrafos);
+        font-size: map-get($sizes-media, parrafos);
         width: 100%;
         margin: 0 auto;
         padding: 20px;
@@ -434,11 +472,14 @@
 
     .diasyhorarios{
         width: 70%;
+        p{
+            font-size: map-get($sizes-media, parrafos);
+        }
     }
 
     .container__ubisobrenosotros {
         h2 {
-            font-size: map-get($sizes,titulos);
+            font-size: map-get($sizes-media,titulos);
             margin-top: 10px;
         }
         .container__iframe{
@@ -457,12 +498,13 @@
             width: 90%;
             justify-content: space-around;
             h3 {
-                font-size: map-get($sizes, titulos);
+                font-size: map-get($sizes-media, titulos);
             }
             .contactform2__titulo{
+                justify-content: space-around;
                 a{
                     p {
-                        font-size: map-get($sizes, parrafos);
+                        font-size: map-get($sizes-media, parrafos);
                     }
                 }
             }
@@ -476,19 +518,431 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 399px)  {
-    .main__index{
-        .section2{
-            .container2{
-                width: 100%;
-                .carruselImagenes2{
-                    width: 290px;
-                    height: 350px;
+
+
+@media (min-width: 480px) and (max-width: 768px){
+    /*INDEX*/
+    header {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "menu logo carrito";
+        align-items: center;
+        justify-items: center;
+        .contenedorLogo {
+            grid-area: logo;
+            margin: 0px;
+            justify-content: center;
+        }
+        .navbar
+            ul {
+            display: none;
+            li {
+                font-size: map-get($sizes, parrafos );
+                font-weight: bold;
+            }
+        }
+        .icono {
+            display: none;
+        }
+        .nav__responsive {
+            display: flex;
+            grid-area: menu;
+            justify-self: start;
+            padding: 8px;
+            .offcanvas-body {
+                margin: 0px;
+                padding: 0px;
+                div {
+                    display: flex;
+                    .navbar__ul__responsive {
+                        list-style-type: none;
+                        color: black;
+                        padding: 12px;
+                        li {
+                            padding-top: 20px;
+                            a {
+                                text-decoration: none;
+                                color: black;
+                            }
+                        }
+                    }
                 }
-                .nombre{
-                    height: 20px;
+            }
+            .fa-solid {
+                font-size: 20px;
+                color: black;
+            }
+        }
+        .carrito_responsive {
+            display: flex;
+            grid-area: carrito;
+            justify-self: end;
+            padding: 8px;
+            .btn {
+                background-color: none;
+                padding: 0px;
+                border: none;
+            }
+            .offcanvas-header {
+                border-bottom: 1px solid black;
+            }
+            .offcanvas-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0px;
+                padding: 0px;
+                .container__carrito {
+                    display: grid;
+                    grid-template-columns: 100px 1fr;
+                    grid-template-rows: repeat(4, 1fr);
+                    grid-template-areas: " imgcarrito desccarrito " " imgcarrito desccarrito " " imgcarrito inputcant" " imgcarrito . ";
+                    padding: 15px;
+                    column-gap: 10px;
+                    .imagencarrito {
+                        grid-area: imgcarrito;
+                        img {
+                            width: 100px;
+                            height: 130px;
+                        }
+                    }
+                    .descripcioncarrito {
+                        grid-area: desccarrito;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .descripcion__nombre {
+                            font-weight: bold;
+                            font-size: map-get($sizes, parrafos );
+                            margin: 0px 5px;
+                        }
+                        .descripcion__precio {
+                            font-size: map-get($sizes, parrafos );
+                            margin: 10px 5px;
+                            font-weight: bold;
+                        }
+                    }
+                    .inputcantidad {
+                        display: flex;
+                        width: 40%;
+                        align-items: center;
+                        justify-content: center;
+                        grid-area: inputcant;
+                        input {
+                            text-align: center;
+                            font-size: map-get($sizes, parrafos );
+                            width: 80px;
+                            height: 30px;
+                            padding: 2px;
+                        }
+                    }
+                }
+                .buttoncompra button {
+                    width: 100%;
+                    height: 60px;
+                    margin: 0px;
+                    padding: 0px;
+                    background-color: black;
+                    color: white;
+                    border: none;
                 }
             }
         }
-    } 
-} 
+    }
+
+
+    .main__index{
+        .titulo{
+            h1{
+                text-align: center;
+                font-size: map-get($sizes-media, titulos );
+            }
+        }
+        .section1{
+            width: 100%;
+            flex-direction: row;
+            margin: 10px auto;
+            .container{
+                width:50%;
+                .carruselImagenes{
+                    width: 100%;
+                    height: 45%;
+                    padding: 10px;
+                }
+                .nombre{
+                    font-size: map-get($sizes-media, parrafos );
+                    width: 100%;
+                    height: 40px;
+                }
+                .precio{
+                    font-size: map-get($sizes-media, parrafos );
+                    width: 100%;
+                    height: 20px;
+                }
+                .botoncarrito{
+                    width: 100%;
+                    padding: 10px;
+                    @include d-flex(center,center,row);
+                    button{
+                        width: 35px;
+                        height: 35px;
+                        i{
+                            font-size: map-get($sizes-media, parrafos);
+                        }
+                        &:active{
+                            scale: 1.03;
+                            transform: rotateY(360deg);
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+        }
+        .titulo{
+            h2{
+                font-size: map-get($sizes-media, titulos);
+                text-align: center;
+            }
+        }
+        .section2{
+            .container2{
+                width: 33%;
+                margin: 10px auto;
+                .carruselImagenes2{
+                    width: 100%;
+                    height: 45%;
+                }
+                .nombre{
+                    font-size: map-get($sizes-media, parrafos );
+                    width: 100%;
+                    height: 40px;
+                }
+                .precio{
+                    font-size: map-get($sizes-media, parrafos );
+                    width: 100%;
+                    height: 20px;
+                }
+                .botoncarrito{
+                    width: 100%;
+                    padding: 10px;
+                    @include d-flex(center,center,row);
+                    button{
+                        width: 35px;
+                        height: 35px;
+                        i{
+                            font-size: map-get($sizes-media, parrafos);
+                        }
+                        &:active{
+                            scale: 1.03;
+                            transform: rotateY(360deg);
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+        }
+        .container__contact-ubi{
+            flex-direction: column; 
+            height: 100%;
+            .container__ubi{
+                h3{
+                    font-size: map-get($sizes-media, titulos );
+                }
+                width: 90%;
+                iframe{
+                    width: 100%;
+                }   
+            }
+            .container__contactform{
+                width: 100%;
+                .titulo__contacto{
+                    a{
+                        h3{
+                            font-size: map-get($sizes-media, titulos );
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*ZAPATILLAS*/
+    .mainzapatillas{
+        .titulozapatillas{
+            font-size: map-get($sizes-media, titulos);
+        }
+        .section__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .article__filtros {
+                display: none;
+            }
+            .filtros__responsive {
+                width: 100%;
+                display: flex;
+                padding: 10px;
+                justify-content: start;
+                align-items: center;
+                color: black;
+                .buttonfiltros{
+                    font-weight: bold;
+                    color: black;
+                    font-size: map-get($sizes-media, parrafos);
+                    padding: 8px 15px;
+                    border: 1px solid black;
+                    border-radius: 2px;
+                    background-color: white;
+                    margin-right: 10px;
+                }
+                .container__marcas {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    border-top: 1px solid black;
+                    margin: 5px;
+                    .lista__filtros {
+                        list-style: none;
+                    }
+                }
+                .container__talles {
+                    margin: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    border-top: 1px solid black;
+                    .lista__filtros {
+                        list-style: none;
+                    }
+                }
+                .container__precio {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    margin: 5px;
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                    .lista__filtros {
+                        list-style: none;
+                    }
+                }
+                .deshacer{
+                    font-weight: bold;
+                    color: black;
+                    font-size: map-get($sizes-media, parrafos);
+                    padding: 8px 15px;
+                    border: 1px solid black;
+                    border-radius: 2px;
+                    background-color: white;
+                    margin-right: 10px;
+                    font-size: map-get($sizes-media,parrafos);
+                }
+            }
+            .article__zapatillas {
+                width: 100%;
+                display: flex;
+                margin: 0px auto;
+                margin-bottom: 40px;
+                justify-content: center;
+                align-items: center;
+                .contenidoimagen{
+                    padding: 10px;
+                    width:50%;
+                    margin: 0 auto;
+                    img{
+                        width: 100%;
+                        height: 35%;
+                    }
+                    .nombrezapas{
+                        font-size: map-get($sizes-media, parrafos );
+                        width: 100%;
+                        height: 60px;
+                        padding-top: 20px;
+                    }
+                    .preciozapas{
+                        font-size: map-get($sizes-media, parrafos );
+                        padding: 2px;
+                        width: 100%;
+                        height: 20px;
+                    }
+                    .botoncarrito{
+                        width: 100%;
+                        @include d-flex(center,center,row);
+                        button{
+                            width: 35px;
+                            height: 35px;
+                            i{
+                                font-size: map-get($sizes-media, parrafos );
+                            }
+                            &:active{
+                                scale: 1.03;
+                                transform: rotateY(360deg);
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*AYUDA*/
+    .titulo__ayuda{
+        h1{
+            margin-top: 20px;
+            font-size: map-get($sizes-media, titulos );
+        }
+    }
+    .ayudacontainer {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        .imagenayuda {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+            margin: 0 10px;
+            img {
+                width: 100%;
+                height: 20%;
+            }
+            a{
+                width: 100%;
+                p {
+                    width: 100%;
+                    font-size: map-get($sizes, parrafos);
+                }
+            }
+        }
+    }
+
+
+    /*SOBRENOSOTROS*/
+    .titulo{
+        h1{
+            font-size: map-get($sizes-media, titulos );
+        }
+    }
+    .containerimagenessobrenosotros {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    .diasyhorarios{
+        width: 80%;
+        p{
+            font-size: map-get($sizes-media, parrafos);
+        }
+    }
+    .container__ubisobrenosotros{
+        h2{
+            font-size: map-get($sizes-media, titulos );
+        }
+    }
+}

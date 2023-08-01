@@ -638,7 +638,8 @@ footer .cookies a {
   font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .ayudacontainer {
@@ -1006,6 +1007,7 @@ footer .cookies a {
   /*MAIN INDEX MEDIA*/
   .main__index .titulo h1 {
     text-align: center;
+    font-size: 20px;
   }
   .main__index .section1 {
     display: none;
@@ -1031,41 +1033,49 @@ footer .cookies a {
     margin-top: 25px;
   }
   .main__index .titulo h2 {
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
   }
   .main__index .section2 {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 20px;
   }
   .main__index .section2 .container2 {
     text-align: center;
-    width: 200px;
-    margin: 20px auto;
+    width: 45%;
+    margin: 0px auto;
+    padding: 10px 0;
   }
   .main__index .section2 .container2 .carruselImagenes2 {
-    width: 190px;
-    height: 250px;
+    width: 100%;
+    height: 25%;
   }
   .main__index .section2 .container2 .nombre {
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
-    height: 60px;
+    height: 40px;
+    padding-top: 20px;
   }
   .main__index .section2 .container2 .precio {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 2px;
     width: 100%;
   }
   .main__index .section2 .container2 .botoncarrito {
     width: 100%;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
   }
   .main__index .section2 .container2 .botoncarrito button {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+  }
+  .main__index .section2 .container2 .botoncarrito button i {
+    font-size: 12px;
   }
   .main__index .section2 .container2 .botoncarrito button:active {
     scale: 1.03;
@@ -1089,6 +1099,8 @@ footer .cookies a {
   }
   .main__index .container__contact-ubi .container__ubi h3 {
     color: black;
+    font-size: 20px;
+    font-weight: bold;
   }
   .main__index .container__contact-ubi .container__ubi iframe {
     width: 100%;
@@ -1109,6 +1121,8 @@ footer .cookies a {
   }
   .main__index .container__contact-ubi .container__contactform .titulo__contacto a h3 {
     color: black;
+    font-size: 20px;
+    font-weight: bold;
   }
   .main__index .container__contact-ubi .container__contactform .contact__form input {
     width: 90%;
@@ -1135,6 +1149,9 @@ footer .cookies a {
   .mainzapatillas .container-fluid .imgbanner__zapas {
     height: 60vh;
   }
+  .mainzapatillas .titulozapatillas {
+    font-size: 20px;
+  }
   .mainzapatillas .section__container {
     display: flex;
     flex-direction: column;
@@ -1152,10 +1169,10 @@ footer .cookies a {
     align-items: center;
     color: black;
   }
-  .mainzapatillas .section__container .filtros__responsive .buttonfiltros, .mainzapatillas .section__container .filtros__responsive .deshacer {
+  .mainzapatillas .section__container .filtros__responsive .buttonfiltros {
     font-weight: bold;
     color: black;
-    font-size: 14px;
+    font-size: 12px;
     padding: 8px 15px;
     border: 1px solid black;
     border-radius: 2px;
@@ -1193,33 +1210,45 @@ footer .cookies a {
   .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros {
     list-style: none;
   }
+  .mainzapatillas .section__container .filtros__responsive .deshacer {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: white;
+    margin-right: 10px;
+    font-size: 12px;
+  }
   .mainzapatillas .section__container .article__zapatillas {
     width: 100%;
     display: flex;
-    margin: 0px;
+    margin: 0px auto;
     margin-bottom: 40px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen {
-    width: 200px;
-    padding: 10px;
+    padding: 10px 0px;
+    width: 45%;
     margin: 0 auto;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen img {
-    width: 190px;
-    height: 250px;
+    width: 100%;
+    height: 25%;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen .nombrezapas {
-    padding-top: 10px;
-    width: 180px;
-    height: 45px;
     font-size: 12px;
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen .preciozapas {
-    width: 80px;
     font-size: 12px;
+    padding: 2px;
+    width: 100%;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito {
     width: 100%;
@@ -1229,8 +1258,11 @@ footer .cookies a {
     flex-direction: row;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button i {
+    font-size: 12px;
   }
   .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button:active {
     scale: 1.03;
@@ -1238,9 +1270,12 @@ footer .cookies a {
     transition: 0.5s;
   }
   /*AYUDA*/
+  .titulo__ayuda h1 {
+    font-size: 20px;
+  }
   .ayudacontainer {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -1265,8 +1300,11 @@ footer .cookies a {
   .container-fluid .imgbanner__sobrenosotros {
     height: 60vh;
   }
+  .titulo h1 {
+    font-size: 20px;
+  }
   .sobrenosotros__p {
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -1286,8 +1324,11 @@ footer .cookies a {
   .diasyhorarios {
     width: 70%;
   }
+  .diasyhorarios p {
+    font-size: 12px;
+  }
   .container__ubisobrenosotros h2 {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
   }
   .container__ubisobrenosotros .container__iframe iframe {
@@ -1303,10 +1344,13 @@ footer .cookies a {
     justify-content: space-around;
   }
   .container__contactform2 .contactform2 h3 {
-    font-size: 25px;
+    font-size: 20px;
+  }
+  .container__contactform2 .contactform2 .contactform2__titulo {
+    justify-content: space-around;
   }
   .container__contactform2 .contactform2 .contactform2__titulo a p {
-    font-size: 14px;
+    font-size: 12px;
   }
   /*OFF CANVAS BACKDROP*/
   .offcanvas-backdrop {
@@ -1314,16 +1358,412 @@ footer .cookies a {
     height: 100%;
   }
 }
-@media (min-width: 320px) and (max-width: 399px) {
-  .main__index .section2 .container2 {
+@media (min-width: 480px) and (max-width: 768px) {
+  /*INDEX*/
+  header {
+    margin: 0px;
+    padding: 0px;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu logo carrito";
+    align-items: center;
+    justify-items: center;
+  }
+  header .contenedorLogo {
+    grid-area: logo;
+    margin: 0px;
+    justify-content: center;
+  }
+  header .navbar ul {
+    display: none;
+  }
+  header .navbar ul li {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  header .icono {
+    display: none;
+  }
+  header .nav__responsive {
+    display: flex;
+    grid-area: menu;
+    justify-self: start;
+    padding: 8px;
+  }
+  header .nav__responsive .offcanvas-body {
+    margin: 0px;
+    padding: 0px;
+  }
+  header .nav__responsive .offcanvas-body div {
+    display: flex;
+  }
+  header .nav__responsive .offcanvas-body div .navbar__ul__responsive {
+    list-style-type: none;
+    color: black;
+    padding: 12px;
+  }
+  header .nav__responsive .offcanvas-body div .navbar__ul__responsive li {
+    padding-top: 20px;
+  }
+  header .nav__responsive .offcanvas-body div .navbar__ul__responsive li a {
+    text-decoration: none;
+    color: black;
+  }
+  header .nav__responsive .fa-solid {
+    font-size: 20px;
+    color: black;
+  }
+  header .carrito_responsive {
+    display: flex;
+    grid-area: carrito;
+    justify-self: end;
+    padding: 8px;
+  }
+  header .carrito_responsive .btn {
+    background-color: none;
+    padding: 0px;
+    border: none;
+  }
+  header .carrito_responsive .offcanvas-header {
+    border-bottom: 1px solid black;
+  }
+  header .carrito_responsive .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: " imgcarrito desccarrito " " imgcarrito desccarrito " " imgcarrito inputcant" " imgcarrito . ";
+    padding: 15px;
+    column-gap: 10px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito {
+    grid-area: imgcarrito;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito img {
+    width: 100px;
+    height: 130px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito {
+    grid-area: desccarrito;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px 5px;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__precio {
+    font-size: 14px;
+    margin: 10px 5px;
+    font-weight: bold;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    grid-area: inputcant;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad input {
+    text-align: center;
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+    padding: 2px;
+  }
+  header .carrito_responsive .offcanvas-body .buttoncompra button {
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  .main__index .titulo h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .main__index .section1 {
+    width: 100%;
+    flex-direction: row;
+    margin: 10px auto;
+  }
+  .main__index .section1 .container {
+    width: 50%;
+  }
+  .main__index .section1 .container .carruselImagenes {
+    width: 100%;
+    height: 45%;
+    padding: 10px;
+  }
+  .main__index .section1 .container .nombre {
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+  }
+  .main__index .section1 .container .precio {
+    font-size: 12px;
+    width: 100%;
+    height: 20px;
+  }
+  .main__index .section1 .container .botoncarrito {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .main__index .section1 .container .botoncarrito button {
+    width: 35px;
+    height: 35px;
+  }
+  .main__index .section1 .container .botoncarrito button i {
+    font-size: 12px;
+  }
+  .main__index .section1 .container .botoncarrito button:active {
+    scale: 1.03;
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }
+  .main__index .titulo h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .main__index .section2 .container2 {
+    width: 33%;
+    margin: 10px auto;
   }
   .main__index .section2 .container2 .carruselImagenes2 {
-    width: 290px;
-    height: 350px;
+    width: 100%;
+    height: 45%;
   }
   .main__index .section2 .container2 .nombre {
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+  }
+  .main__index .section2 .container2 .precio {
+    font-size: 12px;
+    width: 100%;
     height: 20px;
+  }
+  .main__index .section2 .container2 .botoncarrito {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .main__index .section2 .container2 .botoncarrito button {
+    width: 35px;
+    height: 35px;
+  }
+  .main__index .section2 .container2 .botoncarrito button i {
+    font-size: 12px;
+  }
+  .main__index .section2 .container2 .botoncarrito button:active {
+    scale: 1.03;
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }
+  .main__index .container__contact-ubi {
+    flex-direction: column;
+    height: 100%;
+  }
+  .main__index .container__contact-ubi .container__ubi {
+    width: 90%;
+  }
+  .main__index .container__contact-ubi .container__ubi h3 {
+    font-size: 20px;
+  }
+  .main__index .container__contact-ubi .container__ubi iframe {
+    width: 100%;
+  }
+  .main__index .container__contact-ubi .container__contactform {
+    width: 100%;
+  }
+  .main__index .container__contact-ubi .container__contactform .titulo__contacto a h3 {
+    font-size: 20px;
+  }
+  /*ZAPATILLAS*/
+  .mainzapatillas .titulozapatillas {
+    font-size: 20px;
+  }
+  .mainzapatillas .section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainzapatillas .section__container .article__filtros {
+    display: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: start;
+    align-items: center;
+    color: black;
+  }
+  .mainzapatillas .section__container .filtros__responsive .buttonfiltros {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: white;
+    margin-right: 10px;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__marcas {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid black;
+    margin: 5px;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__marcas .lista__filtros {
+    list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__talles {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid black;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__talles .lista__filtros {
+    list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__precio {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros {
+    list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .deshacer {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: white;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .mainzapatillas .section__container .article__zapatillas {
+    width: 100%;
+    display: flex;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen {
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen img {
+    width: 100%;
+    height: 35%;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .nombrezapas {
+    font-size: 12px;
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .preciozapas {
+    font-size: 12px;
+    padding: 2px;
+    width: 100%;
+    height: 20px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button {
+    width: 35px;
+    height: 35px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button i {
+    font-size: 12px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button:active {
+    scale: 1.03;
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }
+  /*AYUDA*/
+  .titulo__ayuda h1 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .ayudacontainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ayudacontainer .imagenayuda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 0 10px;
+  }
+  .ayudacontainer .imagenayuda img {
+    width: 100%;
+    height: 20%;
+  }
+  .ayudacontainer .imagenayuda a {
+    width: 100%;
+  }
+  .ayudacontainer .imagenayuda a p {
+    width: 100%;
+    font-size: 14px;
+  }
+  /*SOBRENOSOTROS*/
+  .titulo h1 {
+    font-size: 20px;
+  }
+  .containerimagenessobrenosotros {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .diasyhorarios {
+    width: 80%;
+  }
+  .diasyhorarios p {
+    font-size: 12px;
+  }
+  .container__ubisobrenosotros h2 {
+    font-size: 20px;
   }
 }
 /*IMPORT FUENTES*/
