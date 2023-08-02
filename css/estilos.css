@@ -191,46 +191,46 @@ header .carrito_responsive .btn {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 20px auto;
-  max-width: 1600px;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1600px;
 }
-.main__index .section1 .container {
-  width: 380px;
-  padding: 20px 0px;
+.main__index .section1 .containerimg {
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.main__index .section1 .container .carruselImagenes {
-  width: 340px;
-  height: 450px;
+.main__index .section1 .containerimg .carruselImagenes {
+  padding: 0px 20px;
+  width: 100%;
+  height: 100%;
 }
-.main__index .section1 .container .carruselImagenes:hover {
+.main__index .section1 .containerimg .carruselImagenes:hover {
   transform: scale(1.01);
   cursor: pointer;
 }
-.main__index .section1 .container .nombre {
+.main__index .section1 .containerimg .nombre {
   padding: 10px;
-  width: 250px;
+  width: 220px;
   height: 50px;
   text-align: center;
   font-weight: bold;
   font-size: 14px;
 }
-.main__index .section1 .container .precio {
+.main__index .section1 .containerimg .precio {
   text-align: center;
   font-size: 14px;
 }
-.main__index .section1 .container .botoncarrito {
+.main__index .section1 .containerimg .botoncarrito {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-.main__index .section1 .container .botoncarrito button {
+.main__index .section1 .containerimg .botoncarrito button {
   width: 50px;
   height: 50px;
   border: none;
@@ -238,7 +238,7 @@ header .carrito_responsive .btn {
   background-color: #f3f3f3;
   border: 2px solid black;
 }
-.main__index .section1 .container .botoncarrito button:hover {
+.main__index .section1 .containerimg .botoncarrito button:hover {
   scale: 1.03;
   transform: rotateY(360deg);
   transition: 0.5s;
@@ -260,20 +260,22 @@ header .carrito_responsive .btn {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .main__index .section2 .container2 {
+  width: 30%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0px 10px;
-  margin: 0 40px;
-  margin-top: 40px;
+  margin: 40px auto;
 }
 .main__index .section2 .container2 .carruselImagenes2 {
-  width: 440px;
-  height: 580px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
 }
 .main__index .section2 .container2 .carruselImagenes2:hover {
   transform: scale(1.01);
@@ -515,6 +517,7 @@ footer .cookies a {
   width: 200px;
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 .mainzapatillas .section__container .article__filtros .container__filtros {
   padding-bottom: 25px;
@@ -584,9 +587,10 @@ footer .cookies a {
   flex-direction: column;
   padding: 10px;
   margin: 0 auto;
+  width: 30%;
 }
 .mainzapatillas .section__container .article__zapatillas .contenidoimagen img {
-  width: 300px;
+  width: 100%;
   border-radius: 2px;
 }
 .mainzapatillas .section__container .article__zapatillas .contenidoimagen img:hover {
@@ -732,7 +736,7 @@ footer .cookies a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 25%;
+  width: 45%;
   margin: 40px auto;
 }
 .diasyhorarios p {
@@ -1319,7 +1323,6 @@ footer .cookies a {
   }
   .containerimagenessobrenosotros img {
     width: 100%;
-    height: 500px;
   }
   .diasyhorarios {
     width: 70%;
@@ -1497,25 +1500,25 @@ footer .cookies a {
     flex-direction: row;
     margin: 10px auto;
   }
-  .main__index .section1 .container {
+  .main__index .section1 .containerimg {
     width: 50%;
   }
-  .main__index .section1 .container .carruselImagenes {
+  .main__index .section1 .containerimg .carruselImagenes {
     width: 100%;
     height: 45%;
     padding: 10px;
   }
-  .main__index .section1 .container .nombre {
+  .main__index .section1 .containerimg .nombre {
     font-size: 12px;
     width: 100%;
     height: 40px;
   }
-  .main__index .section1 .container .precio {
+  .main__index .section1 .containerimg .precio {
     font-size: 12px;
     width: 100%;
     height: 20px;
   }
-  .main__index .section1 .container .botoncarrito {
+  .main__index .section1 .containerimg .botoncarrito {
     width: 100%;
     padding: 10px;
     display: flex;
@@ -1523,14 +1526,14 @@ footer .cookies a {
     align-items: center;
     flex-direction: row;
   }
-  .main__index .section1 .container .botoncarrito button {
+  .main__index .section1 .containerimg .botoncarrito button {
     width: 35px;
     height: 35px;
   }
-  .main__index .section1 .container .botoncarrito button i {
+  .main__index .section1 .containerimg .botoncarrito button i {
     font-size: 12px;
   }
-  .main__index .section1 .container .botoncarrito button:active {
+  .main__index .section1 .containerimg .botoncarrito button:active {
     scale: 1.03;
     transform: rotateY(360deg);
     transition: 0.5s;
@@ -1545,7 +1548,7 @@ footer .cookies a {
   }
   .main__index .section2 .container2 .carruselImagenes2 {
     width: 100%;
-    height: 45%;
+    height: 100%;
   }
   .main__index .section2 .container2 .nombre {
     font-size: 12px;
@@ -1764,6 +1767,296 @@ footer .cookies a {
   }
   .container__ubisobrenosotros h2 {
     font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /*MAIN INDEX*/
+  .main__index .titulo h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .main__index .section1 {
+    width: 100%;
+    flex-direction: row;
+    margin: 10px auto;
+  }
+  .main__index .section1 .containerimg {
+    width: 45%;
+  }
+  .main__index .section1 .containerimg .carruselImagenes {
+    width: 100%;
+    height: 45%;
+    padding: 10px;
+  }
+  .main__index .section1 .containerimg .nombre {
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+  }
+  .main__index .section1 .containerimg .precio {
+    font-size: 12px;
+    width: 100%;
+    height: 20px;
+  }
+  .main__index .section1 .containerimg .botoncarrito {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .main__index .section1 .containerimg .botoncarrito button {
+    width: 35px;
+    height: 35px;
+  }
+  .main__index .section1 .containerimg .botoncarrito button i {
+    font-size: 12px;
+  }
+  .main__index .section1 .containerimg .botoncarrito button:active {
+    scale: 1.03;
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }
+  .main__index .titulo h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .main__index .section2 .container2 {
+    width: 33%;
+    margin: 10px auto;
+  }
+  .main__index .section2 .container2 .carruselImagenes2 {
+    width: 100%;
+    height: 100%;
+  }
+  .main__index .section2 .container2 .nombre {
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+  }
+  .main__index .section2 .container2 .precio {
+    font-size: 12px;
+    width: 100%;
+    height: 20px;
+  }
+  .main__index .section2 .container2 .botoncarrito {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .main__index .section2 .container2 .botoncarrito button {
+    width: 35px;
+    height: 35px;
+  }
+  .main__index .section2 .container2 .botoncarrito button i {
+    font-size: 12px;
+  }
+  .main__index .section2 .container2 .botoncarrito button:active {
+    scale: 1.03;
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }
+  .main__index .container__contact-ubi {
+    flex-direction: column;
+    height: 100%;
+  }
+  .main__index .container__contact-ubi .container__ubi {
+    width: 90%;
+  }
+  .main__index .container__contact-ubi .container__ubi h3 {
+    font-size: 20px;
+  }
+  .main__index .container__contact-ubi .container__ubi iframe {
+    width: 100%;
+  }
+  .main__index .container__contact-ubi .container__contactform {
+    width: 100%;
+  }
+  .main__index .container__contact-ubi .container__contactform .titulo__contacto a h3 {
+    font-size: 20px;
+  }
+  /*ZAPATILLAS*/
+  .mainzapatillas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mainzapatillas .container-fluid .imgbanner__zapas {
+    background-image: url(../img/Banners/banner-zapatillas.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+  }
+  .mainzapatillas .titulozapatillas {
+    text-align: center;
+    margin: 40px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .mainzapatillas .section__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+  }
+  .mainzapatillas .section__container .article__filtros {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .mainzapatillas .section__container .article__filtros .container__filtros {
+    padding-bottom: 25px;
+  }
+  .mainzapatillas .section__container .article__filtros .container__filtros h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .mainzapatillas .section__container .article__filtros .container__marcas h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .mainzapatillas .section__container .article__filtros .container__marcas ul {
+    padding: 8px;
+    list-style: none;
+  }
+  .mainzapatillas .section__container .article__filtros .container__marcas li {
+    font-size: 12px;
+  }
+  .mainzapatillas .section__container .article__filtros .container__talles h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .mainzapatillas .section__container .article__filtros .container__talles ul {
+    padding: 8px;
+    list-style: none;
+  }
+  .mainzapatillas .section__container .article__filtros .container__talles li {
+    font-size: 12px;
+  }
+  .mainzapatillas .section__container .article__filtros .container__precio h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .mainzapatillas .section__container .article__filtros .container__precio ul {
+    padding: 8px;
+    list-style: none;
+  }
+  .mainzapatillas .section__container .article__filtros .container__precio li {
+    font-size: 12px;
+  }
+  .mainzapatillas .section__container .article__filtros .deshacer {
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 12px;
+  }
+  .mainzapatillas .section__container .article__filtros .deshacer:hover {
+    scale: 1.02;
+  }
+  .mainzapatillas .section__container .article__zapatillas {
+    grid-area: zapatillas;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 45%;
+    margin: 0 auto;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen img {
+    width: 100%;
+    border-radius: 2px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen img:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .nombrezapas {
+    padding: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .preciozapas {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    border: 2px solid black;
+  }
+  .mainzapatillas .section__container .article__zapatillas .contenidoimagen .botoncarrito button:hover {
+    scale: 1.03;
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }
+  /*SOBRE NOSOTROS*/
+  .container-fluid .imgbanner__sobrenosotros {
+    height: 60vh;
+  }
+  .titulo h1 {
+    font-size: 20px;
+  }
+  .sobrenosotros__p {
+    font-size: 12px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .containerimagenessobrenosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerimagenessobrenosotros img {
+    width: 100%;
+  }
+  .diasyhorarios {
+    width: 50%;
+  }
+  .diasyhorarios p {
+    font-size: 12px;
+  }
+  .container__ubisobrenosotros h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .container__ubisobrenosotros .container__iframe iframe {
+    width: 100%;
+    height: 480px;
   }
 }
 /*IMPORT FUENTES*/

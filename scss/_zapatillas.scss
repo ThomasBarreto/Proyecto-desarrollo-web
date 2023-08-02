@@ -34,6 +34,7 @@
             width: 200px;
             display: flex;
             flex-direction: column;
+            margin-left: 20px;
             .container__filtros {
                 padding-bottom: 25px;
                 h2{
@@ -105,8 +106,9 @@
                 @include d-flex(center,center,column);
                 padding: 10px;
                 margin: 0 auto;
+                width: 30%;
                 img {
-                    width: 300px;
+                    width: 100%;
                     border-radius: 2px;
                     @include imagen;
                 }
