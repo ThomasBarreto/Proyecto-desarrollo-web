@@ -36,17 +36,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div class="container__carrito">
-                        <div class="imagencarrito">
-                            <img src="../img/Zapatillas-Modelos/jordanlow.jpg" alt="Imagen Jordan Snakeskin Vivid Low Green">
-                        </div>
-                        <div class="descripcioncarrito">
-                            <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
-                            <p class="descripcion__precio">$260</p>
-                        </div>
-                        <div class="inputcantidad">
-                            <input type="number" name="cantidad" placeholder="1">
-                        </div>
+                    <div class="carrito__compras">
+                        <!-- aca se iran depositando los productos al carrito -->
                     </div>
                     <div class="buttoncompra">
                         <button type="submit">Comprar</button>
@@ -87,17 +78,8 @@
                 </div>
                 
                 <div class="offcanvas-body">
-                    <div class="container__carrito">
-                        <div class="imagencarrito">
-                            <img src="../img/Zapatillas-Modelos/jordanlow.jpg" alt="Imagen Jordan Snakeskin Vivid Low Green">
-                        </div>
-                        <div class="descripcioncarrito">
-                            <p class="descripcion__nombre">Jordan 1 Low Snakeskin Vivid Green</p>
-                            <p class="descripcion__precio">$260</p>
-                        </div>
-                        <div class="inputcantidad">
-                            <input type="number" name="cantidad" placeholder="1">
-                        </div>
+                    <div class="carrito__compras__responsive">
+                        <!-- aca se iran depositando los productos al carrito -->
                     </div>
                     <div class="buttoncompra">
                         <button type="submit">Comprar</button>
@@ -148,5 +130,19 @@
             <a href="../index.html">© Sneaker Store 2023</a>
         </div>
     </footer>
+    <!-- AOS.init -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- javascript -->
+    <script src="/productos.js"></script>
+    <script src="/logica.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
-/*IMPORT SCSS*/ /*VARIABLES*/
+/*IMPORT SCSS*/
+/*VARIABLES*/
 /* MAPS */
 /* MIXINS */
 /*HEADER*/
@@ -84,6 +85,7 @@ header .icono .offcanvas-body {
   padding: 0px;
 }
 header .icono .offcanvas-body .container__carrito {
+  height: 200px;
   display: grid;
   grid-template-columns: 100px 1fr;
   grid-template-rows: repeat(4, 1fr);
@@ -105,35 +107,57 @@ header .icono .offcanvas-body .container__carrito .descripcioncarrito {
 }
 header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre {
   font-weight: bold;
+  width: 100%;
   font-size: 14px;
   margin: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre #borrar {
+  background: none;
+}
+header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre #borrar i {
+  font-size: 18px;
+}
+header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre #borrar i:hover {
+  scale: 1.09;
+  color: red;
 }
 header .icono .offcanvas-body .container__carrito .descripcioncarrito .descripcion__precio {
   font-size: 14px;
-  margin: 10px 5px;
+  margin: 0px 5px;
 }
 header .icono .offcanvas-body .container__carrito .inputcantidad {
   display: flex;
-  width: 40%;
+  width: 80px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   grid-area: inputcant;
+  margin: 10px 5px;
 }
 header .icono .offcanvas-body .container__carrito .inputcantidad input {
   text-align: center;
   font-size: 14px;
-  width: 80px;
-  height: 30px;
-  padding: 2px;
+  width: 100%;
+  padding: 3px;
 }
-header .icono .offcanvas-body .buttoncompra button {
+header .icono .offcanvas-body .buttoncompra #vaciarCarrito {
   width: 100%;
   height: 60px;
   margin: 0px;
   padding: 0px;
   background-color: black;
   color: white;
-  border: none;
+  border: 1px solid white;
+}
+header .icono .offcanvas-body .buttoncompra #finalizarCompra {
+  width: 100%;
+  height: 60px;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
 header .nav__responsive {
   display: none;
@@ -231,8 +255,8 @@ header .carrito_responsive .btn {
   flex-direction: row;
 }
 .main__index .section1 .containerimg .botoncarrito button {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border: none;
   border-radius: 50%;
   background-color: #f3f3f3;
@@ -301,8 +325,8 @@ header .carrito_responsive .btn {
   flex-direction: row;
 }
 .main__index .section2 .container2 .botoncarrito button {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border: none;
   border-radius: 50%;
   background-color: #f3f3f3;
@@ -536,6 +560,9 @@ footer .cookies a {
   list-style: none;
 }
 .mainzapatillas .section__container .article__filtros .container__marcas li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 14px;
 }
 .mainzapatillas .section__container .article__filtros .container__talles h3 {
@@ -547,6 +574,9 @@ footer .cookies a {
   list-style: none;
 }
 .mainzapatillas .section__container .article__filtros .container__talles li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 14px;
 }
 .mainzapatillas .section__container .article__filtros .container__precio h3 {
@@ -558,6 +588,9 @@ footer .cookies a {
   list-style: none;
 }
 .mainzapatillas .section__container .article__filtros .container__precio li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 14px;
 }
 .mainzapatillas .section__container .article__filtros .deshacer {
@@ -955,7 +988,7 @@ footer .cookies a {
     margin: 0px;
     padding: 0px;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive {
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: repeat(4, 1fr);
@@ -963,43 +996,66 @@ footer .cookies a {
     padding: 15px;
     column-gap: 10px;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .imagencarrito {
     grid-area: imgcarrito;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito img {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .imagencarrito img {
     width: 100px;
     height: 130px;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito {
     grid-area: desccarrito;
     display: flex;
     flex-wrap: wrap;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre {
     font-weight: bold;
     font-size: 14px;
     margin: 0px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__precio {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre #borrarResponsive {
+    background: none;
+    border: none;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre #borrarResponsive i {
+    font-size: 18px;
+    color: red;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre #borrarResponsive i:active {
+    scale: 1.09;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__precio {
     font-size: 14px;
     margin: 10px 5px;
     font-weight: bold;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .inputcantidad {
     display: flex;
     width: 40%;
     align-items: center;
     justify-content: center;
     grid-area: inputcant;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad input {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .inputcantidad input {
     text-align: center;
     font-size: 14px;
     width: 80px;
     height: 30px;
     padding: 2px;
   }
-  header .carrito_responsive .offcanvas-body .buttoncompra button {
+  header .carrito_responsive .offcanvas-body .buttoncompra #vaciarCarritoResponsive {
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+  }
+  header .carrito_responsive .offcanvas-body .buttoncompra #finalizarCompraResponsive {
     width: 100%;
     height: 60px;
     margin: 0px;
@@ -1193,6 +1249,11 @@ footer .cookies a {
   .mainzapatillas .section__container .filtros__responsive .container__marcas .lista__filtros {
     list-style: none;
   }
+  .mainzapatillas .section__container .filtros__responsive .container__marcas .lista__filtros li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .mainzapatillas .section__container .filtros__responsive .container__talles {
     margin: 5px;
     display: flex;
@@ -1202,6 +1263,11 @@ footer .cookies a {
   }
   .mainzapatillas .section__container .filtros__responsive .container__talles .lista__filtros {
     list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__talles .lista__filtros li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .mainzapatillas .section__container .filtros__responsive .container__precio {
     display: flex;
@@ -1213,6 +1279,11 @@ footer .cookies a {
   }
   .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros {
     list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .mainzapatillas .section__container .filtros__responsive .deshacer {
     font-weight: bold;
@@ -1438,7 +1509,7 @@ footer .cookies a {
     margin: 0px;
     padding: 0px;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive {
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: repeat(4, 1fr);
@@ -1446,50 +1517,73 @@ footer .cookies a {
     padding: 15px;
     column-gap: 10px;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .imagencarrito {
     grid-area: imgcarrito;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .imagencarrito img {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .imagencarrito img {
     width: 100px;
     height: 130px;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito {
     grid-area: desccarrito;
     display: flex;
     flex-wrap: wrap;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__nombre {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre {
     font-weight: bold;
     font-size: 14px;
     margin: 0px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .descripcioncarrito .descripcion__precio {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre #borrarResponsive {
+    background: none;
+    border: none;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre #borrarResponsive i {
+    font-size: 18px;
+    color: red;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__nombre #borrarResponsive i:active {
+    scale: 1.09;
+  }
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .descripcioncarrito .descripcion__precio {
     font-size: 14px;
     margin: 10px 5px;
     font-weight: bold;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .inputcantidad {
     display: flex;
     width: 40%;
     align-items: center;
     justify-content: center;
     grid-area: inputcant;
   }
-  header .carrito_responsive .offcanvas-body .container__carrito .inputcantidad input {
+  header .carrito_responsive .offcanvas-body .container__carrito__responsive .inputcantidad input {
     text-align: center;
     font-size: 14px;
     width: 80px;
     height: 30px;
     padding: 2px;
   }
-  header .carrito_responsive .offcanvas-body .buttoncompra button {
+  header .carrito_responsive .offcanvas-body .buttoncompra #vaciarCarritoResponsive {
     width: 100%;
     height: 60px;
     margin: 0px;
     padding: 0px;
     background-color: black;
     color: white;
-    border: none;
+    border: 1px solid white;
+  }
+  header .carrito_responsive .offcanvas-body .buttoncompra #finalizarCompraResponsive {
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
   }
   .main__index .titulo h1 {
     text-align: center;
@@ -1640,6 +1734,11 @@ footer .cookies a {
   .mainzapatillas .section__container .filtros__responsive .container__marcas .lista__filtros {
     list-style: none;
   }
+  .mainzapatillas .section__container .filtros__responsive .container__marcas .lista__filtros li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .mainzapatillas .section__container .filtros__responsive .container__talles {
     margin: 5px;
     display: flex;
@@ -1649,6 +1748,11 @@ footer .cookies a {
   }
   .mainzapatillas .section__container .filtros__responsive .container__talles .lista__filtros {
     list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__talles .lista__filtros li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .mainzapatillas .section__container .filtros__responsive .container__precio {
     display: flex;
@@ -1660,6 +1764,11 @@ footer .cookies a {
   }
   .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros {
     list-style: none;
+  }
+  .mainzapatillas .section__container .filtros__responsive .container__precio .lista__filtros li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .mainzapatillas .section__container .filtros__responsive .deshacer {
     font-weight: bold;

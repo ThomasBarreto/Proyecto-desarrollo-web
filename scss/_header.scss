@@ -69,6 +69,7 @@ header{
             margin: 0px;
             padding: 0px;
             .container__carrito {
+                height: 200px;
                 display: grid;
                 grid-template-columns: 100px 1fr;
                 grid-template-rows: repeat(4, 1fr);
@@ -88,37 +89,61 @@ header{
                     flex-wrap: wrap;
                     .descripcion__nombre {
                         font-weight: bold;
+                        width: 100%;
                         font-size: map-get($sizes, parrafos );
                         margin: 0px 5px;
+                        display: flex;
+                        justify-content: space-between;
+                        #borrar{
+                            background: none;
+                            i{
+                                font-size: 18px;
+                                &:hover{
+                                    scale: 1.09;
+                                    color: red;
+                                }
+                            }
+                        }
                     }
                     .descripcion__precio {
                         font-size: map-get($sizes, parrafos );
-                        margin: 10px 5px;
+                        margin: 0px 5px;
                     }
                 }
                 .inputcantidad {
                     display: flex;
-                    width: 40%;
+                    width: 80px;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: start;
                     grid-area: inputcant;
+                    margin: 10px 5px;
                     input {
                         text-align: center;
                         font-size: map-get($sizes, parrafos );
-                        width: 80px;
-                        height: 30px;
-                        padding: 2px;
+                        width: 100%;
+                        padding: 3px;
                     }
                 }
             }
-            .buttoncompra button {
-                width: 100%;
-                height: 60px;
-                margin: 0px;
-                padding: 0px;
-                background-color: black;
-                color: white;
-                border: none;
+            .buttoncompra{
+                #vaciarCarrito{
+                    width: 100%;
+                    height: 60px;
+                    margin: 0px;
+                    padding: 0px;
+                    background-color: black;
+                    color: white;
+                    border: 1px solid white;
+                }
+                #finalizarCompra {
+                    width: 100%;
+                    height: 60px;
+                    margin: 0px;
+                    padding: 0px;
+                    background-color: black;
+                    color: white;
+                    border: 1px solid white;
+                }
             }
         }
     }

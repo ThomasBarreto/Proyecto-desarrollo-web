@@ -74,7 +74,7 @@
                 justify-content: space-between;
                 margin: 0px;
                 padding: 0px;
-                .container__carrito {
+                .container__carrito__responsive {
                     display: grid;
                     grid-template-columns: 100px 1fr;
                     grid-template-rows: repeat(4, 1fr);
@@ -96,6 +96,20 @@
                             font-weight: bold;
                             font-size: map-get($sizes, parrafos );
                             margin: 0px 5px;
+                            width: 100%;      
+                            display: flex;
+                            justify-content: space-between;
+                            #borrarResponsive{
+                                background: none;
+                                border: none;
+                                i{
+                                    font-size: 18px;
+                                    color: red;
+                                    &:active{
+                                        scale: 1.09;
+                                    }
+                                }
+                            }
                         }
                         .descripcion__precio {
                             font-size: map-get($sizes, parrafos );
@@ -118,14 +132,25 @@
                         }
                     }
                 }
-                .buttoncompra button {
-                    width: 100%;
-                    height: 60px;
-                    margin: 0px;
-                    padding: 0px;
-                    background-color: black;
-                    color: white;
-                    border: none;
+                .buttoncompra{
+                    #vaciarCarritoResponsive{
+                        width: 100%;
+                        height: 60px;
+                        margin: 0px;
+                        padding: 0px;
+                        background-color: black;
+                        color: white;
+                        border: 1px solid white;
+                    }
+                    #finalizarCompraResponsive{
+                        width: 100%;
+                        height: 60px;
+                        margin: 0px;
+                        padding: 0px;
+                        background-color: black;
+                        color: white;
+                        border: none;
+                    }
                 }
             }
         }
@@ -323,6 +348,11 @@
                     margin: 5px;
                     .lista__filtros {
                         list-style: none;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
                     }
                 }
                 .container__talles {
@@ -333,6 +363,11 @@
                     border-top: 1px solid black;
                     .lista__filtros {
                         list-style: none;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
                     }
                 }
                 .container__precio {
@@ -344,6 +379,11 @@
                     border-bottom: 1px solid black;
                     .lista__filtros {
                         list-style: none;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
                     }
                 }
                 .deshacer{
@@ -594,7 +634,7 @@
                 justify-content: space-between;
                 margin: 0px;
                 padding: 0px;
-                .container__carrito {
+                .container__carrito__responsive {
                     display: grid;
                     grid-template-columns: 100px 1fr;
                     grid-template-rows: repeat(4, 1fr);
@@ -615,7 +655,21 @@
                         .descripcion__nombre {
                             font-weight: bold;
                             font-size: map-get($sizes, parrafos );
-                            margin: 0px 5px;
+                            margin: 0px 5px;     
+                            width: 100%;      
+                            display: flex;
+                            justify-content: space-between;
+                            #borrarResponsive{
+                                background: none;
+                                border: none;
+                                i{
+                                    font-size: 18px;
+                                    color: red;
+                                    &:active{
+                                        scale: 1.09;
+                                    }
+                                }
+                            }
                         }
                         .descripcion__precio {
                             font-size: map-get($sizes, parrafos );
@@ -638,14 +692,25 @@
                         }
                     }
                 }
-                .buttoncompra button {
-                    width: 100%;
-                    height: 60px;
-                    margin: 0px;
-                    padding: 0px;
-                    background-color: black;
-                    color: white;
-                    border: none;
+                .buttoncompra{
+                    #vaciarCarritoResponsive{
+                        width: 100%;
+                        height: 60px;
+                        margin: 0px;
+                        padding: 0px;
+                        background-color: black;
+                        color: white;
+                        border: 1px solid white;
+                    }
+                    #finalizarCompraResponsive {
+                        width: 100%;
+                        height: 60px;
+                        margin: 0px;
+                        padding: 0px;
+                        background-color: black;
+                        border: 1px solid white;
+                        color: white;
+                    }
                 }
             }
         }
@@ -805,6 +870,11 @@
                     margin: 5px;
                     .lista__filtros {
                         list-style: none;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
                     }
                 }
                 .container__talles {
@@ -815,6 +885,11 @@
                     border-top: 1px solid black;
                     .lista__filtros {
                         list-style: none;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
                     }
                 }
                 .container__precio {
@@ -826,6 +901,11 @@
                     border-bottom: 1px solid black;
                     .lista__filtros {
                         list-style: none;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
                     }
                 }
                 .deshacer{

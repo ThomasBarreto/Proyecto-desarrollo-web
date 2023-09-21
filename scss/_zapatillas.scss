@@ -53,6 +53,9 @@
                     list-style: none;
                 }
                 li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     font-size: map-get($sizes, parrafos);
                 }
             } 
@@ -66,6 +69,9 @@
                     list-style: none;
                 }
                 li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     font-size: map-get($sizes, parrafos);
                 }
             } 
@@ -79,6 +85,9 @@
                     list-style: none;
                 }
                 li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     font-size: map-get($sizes, parrafos);
                 }
             } 

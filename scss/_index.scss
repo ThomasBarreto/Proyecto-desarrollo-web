@@ -1,5 +1,4 @@
 /*INDEX MAIN*/
-
 .main__index{
     width: 100%;
     display: flex;
@@ -59,8 +58,8 @@
                 width: 100%;
                 @include d-flex(center,center,row);
                 button{
-                    width: 50px;
-                    height: 50px;
+                    width: 45px;
+                    height: 45px;
                     border: none;
                     border-radius: 50%;
                     background-color:#f3f3f3;
@@ -120,8 +119,8 @@
                 width: 100%;
                 @include d-flex(center,center,row);
                 button{
-                    width: 50px;
-                    height: 50px;
+                    width: 45px;
+                    height: 45px;
                     border: none;
                     border-radius: 50%;
                     background-color:#f3f3f3;
