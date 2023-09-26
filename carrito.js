@@ -11,7 +11,7 @@ function dibujarCarrito() {
     for (const prod of carrito) { 
 
         let img;
-        if(window.location.href.split('/').reverse()[0] != 'index.html') img = `${prod.img}`;
+        if(window.location.href.split('/').reverse()[0] != 'index.html' || window.location.href != 'https://thomasbarreto.github.io/Proyecto-desarrollo-web/' || window.location.href != 'http://127.0.0.1:5500/') img = `${prod.img}`;
         else img = `.${prod.img.slice(2)}`;
 
         containerCarrito.innerHTML += `
