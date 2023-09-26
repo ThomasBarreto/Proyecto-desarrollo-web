@@ -11,8 +11,8 @@ function dibujarCarrito() {
     for (const prod of carrito) { 
 
         let img;
-        if(window.location.href.split('/').reverse()[0] != 'index.html') img = `.${prod.img}`;
-        else img = `${prod.img}`;
+        if(window.location.href.split('/').reverse()[0] != 'index.html') img = `${prod.img}`;
+        else img = `${prod.img.slice(2)}`;
 
         containerCarrito.innerHTML += `
         <div class="container__carrito">      
