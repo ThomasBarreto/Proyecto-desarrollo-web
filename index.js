@@ -10,7 +10,7 @@ function renderizarProductoSection1(productos) {
         contenedorProductoSection1.classList.add('containerimg');
 
         contenedorProductoSection1.innerHTML = `
-            <img class="carruselImagenes" src="${producto.img.slice(2)}" alt="${producto.nombre}">
+            <img class="carruselImagenes" src=".${producto.img.slice(2)}" alt="${producto.nombre}">
             <p class="nombre">${producto.nombre}</p>
             <p class="precio">$${producto.precio}</p>
             <div class="botoncarrito">
@@ -39,7 +39,7 @@ function renderizarProducto(productos) {
         contenedorProducto.classList.add('container2');
 
         contenedorProducto.innerHTML = `
-            <img class="carruselImagenes2" src="${producto.img.slice(2)}" alt="${producto.nombre}">
+            <img class="carruselImagenes2" src=".${producto.img.slice(2)}" alt="${producto.nombre}">
             <p class="nombre">${producto.nombre}</p>
             <p class="precio">$${producto.precio}</p>
             <div class="botoncarrito">
