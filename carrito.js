@@ -58,12 +58,17 @@ if (carrito.length != 0) {
 
 
 function agregarAlCarrito(producto) {
+
+    let img;
+    if(window.location.href.split('/').reverse()[0] != 'index.html') img = `${producto.img}`;
+    else img = `.${producto.img.slice(2)}`;
+
     carrito.push(producto);
     console.table(carrito);
     Swal.fire({
         html: `
         <div style="display: flex; align-items: center; justify-content:center;">
-            <img src="${producto.img}" alt="${producto.nombre}" style="width: 120px; height: 150px;">
+            <img src="${img}" alt="${producto.nombre}" style="width: 120px; height: 150px;">
             <p style="margin-left: 10px;">Agregaste ${producto.nombre} al carro 🛒</p>
         </div>
     `,
@@ -75,7 +80,7 @@ function agregarAlCarrito(producto) {
     containerCarrito.innerHTML += `
         <div class="container__carrito">      
             <div class="imagencarrito">
-                <img src="${producto.img}" alt="${producto.nombre}">
+                <img src="${img}" alt="${producto.nombre}">
             </div>
             <div class="descripcioncarrito">
                 <p class="descripcion__nombre">${producto.nombre} <button id='borrar'><i class="fa-solid fa-trash-can"></i></button> </p>
@@ -91,7 +96,7 @@ function agregarAlCarrito(producto) {
     containerCarritoResponsive.innerHTML += `
         <div class="container__carrito__responsive">      
             <div class="imagencarrito">
-                <img src="${producto.img}" alt="${producto.nombre}">
+                <img src="${img}" alt="${producto.nombre}">
             </div>
             <div class="descripcioncarrito">
                 <p class="descripcion__nombre">${producto.nombre} <button id='borrarResponsive'><i class="fa-solid fa-trash-can"></i></button></p>
