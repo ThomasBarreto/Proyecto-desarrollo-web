@@ -11,7 +11,7 @@ function dibujarCarrito() {
     for (const prod of carrito) { 
         const currentURL = window.location.href;
         let img;
-        if (currentURL.endsWith('index.html') && currentURL === 'https://thomasbarreto.github.io/Proyecto-desarrollo-web') {
+        if ((currentURL.includes('index.html')) && currentURL.includes('https://thomasbarreto.github.io/Proyecto-desarrollo-web/')){
             img = `${prod.img.slice(1)}`;
         } else {
             img = `${prod.img}`;
