@@ -11,7 +11,7 @@ function dibujarCarrito() {
     for (const prod of carrito) { 
         const currentURL = window.location.href;
         let img;
-        if (currentURL.endsWith('index.html') && currentURL === 'https://thomasbarreto.github.io/Proyecto-desarrollo-web/') {
+        if (currentURL.endsWith('index.html') && currentURL === 'https://thomasbarreto.github.io/Proyecto-desarrollo-web') {
             img = `${prod.img.slice(1)}`;
         } else {
             img = `${prod.img}`;
@@ -65,7 +65,7 @@ function agregarAlCarrito(producto) {
     //VERIFICAR ESTA VALIDACION
     const currentURL = window.location.href;
     let img;
-    if (currentURL.endsWith('index.html') && currentURL === 'https://thomasbarreto.github.io/Proyecto-desarrollo-web/') {
+    if (currentURL.endsWith('index.html') && currentURL === 'https://thomasbarreto.github.io/Proyecto-desarrollo-web') {
         img = `${producto.img.slice(1)}`;
     } else {
         img = `${producto.img}`;
