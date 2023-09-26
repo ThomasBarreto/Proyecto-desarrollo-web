@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="../img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://kit.fontawesome.com/6686341929.js" crossorigin="anonymous"></script>
 </head>
@@ -261,7 +262,7 @@
                 <label for="Deshacerfiltros"></label>
             </article>
             <article class="article__zapatillas">
-                <div class="contenidoimagen">
+                <!-- <div class="contenidoimagen">
                     <img src="../img/Zapatillas-Modelos/adidas Forum Buckle Low Bad Bunny Blue Tint.jpg" alt="Zapatilla Adidas Forum Buckle Low Bad Bunny Blue Tint">
                     <p class="nombrezapas">Adidas Forum Buckle Low Bad Bunny Blue Tint</p>
                     <p class="preciozapas">$260</p>
@@ -404,22 +405,9 @@
                     <div class="botoncarrito">
                         <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
                     </div>
-                </div>
+                </div> -->
             </article>
         </section>
-        <nav aria-label="Page navigation example">
-            <ul class=" pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link text-white  bg-dark"><i class="fa-solid fa-arrow-left"></i></a>
-                </li>
-                <li class="page-item "><a class="page-link text-white bg-dark" href="#">1</a></li>
-                <li class="page-item"><a class="page-link text-white  bg-dark" href="#">2</a></li>
-                <li class="page-item"><a class="page-link text-white bg-dark" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link text-white  bg-dark" href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                </li>
-            </ul>
-        </nav>
     </main>
     <footer>
         <div>
@@ -436,8 +424,9 @@
     <script>AOS.init();</script>
 
     <!-- javascript -->
-    <script src="/productos.js"></script>
-    <script src="/logica.js"></script>
+    <script src="../productos.js"></script>
+    <script src="../carrito.js" ></script>
+    <script src="../zapatillas.js"></script>
     
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
