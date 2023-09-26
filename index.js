@@ -6,6 +6,8 @@ function renderizarProductoSection1(productos) {
 
     primerosCuatroProductos.forEach(producto => {
 
+        console.log(producto.img.slice(1))
+
         const contenedorProductoSection1 = document.createElement('div');
         contenedorProductoSection1.classList.add('containerimg');
 

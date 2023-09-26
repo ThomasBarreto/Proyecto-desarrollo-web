@@ -1,7 +1,7 @@
 const sneakers = [
     {
         id:1,
-        img:'../img/Zapatillas-Modelos/Jordan 1 Mid French Blue Fire Red.jpg',
+        img:'../img/Zapatillas-Modelos/Jordan-1-Mid-French-Blue-Fire-Red.jpg',
         nombre:'Jordan 1 Mid French Blue Fire Red',
         precio:230,
     },
