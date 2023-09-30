@@ -1,0 +1,97 @@
+#mainProducto{
+    border-top: 1px solid  rgba(0, 0, 0, 0.080);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    #detalle-producto{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:
+        ' img tituloPrecio '
+        ' img talles '
+        ' img talles '
+        ' img talles '
+        ;
+        justify-items: stretch;
+        align-items: center;
+        img{   
+            margin: 0 20px;
+            grid-area: img;
+            width: 550px;
+            height: 700px;
+        }
+        .containerDetalles{
+            grid-area: tituloPrecio;
+            display: flex;
+            height: max-content;
+            flex-direction: column;
+            h1{
+                width: 100%;
+                height: max-content;
+                font-size: 28px;
+                padding: 10px;
+                font-weight: bold;
+            }
+            p{
+                width: max-content;
+                height: max-content;
+                font-size: 14px;
+                padding: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+        .talles{
+            width: 100%;
+            grid-area: talles;
+            display: flex;
+            flex-direction: column;
+            h2{
+                height: max-content;
+                padding: 10px;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            ul{
+                padding: 10px;
+                height: 300px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                margin-left: 0;
+                li{
+                    margin: 8px;
+                    padding: 10px;
+                    border: 1px solid black;
+                    text-align: center;
+                    width: 80px;
+                    height: max-content;
+                    button{
+                        background: rgba(0, 0, 0, 0.046);
+                        border: none;
+                        width: 100%;
+                    }
+                }
+            }
+            .botoncarrito{
+                width: 100%;
+                @include d-flex(center,center,row);
+                button{
+                    width: 100%;
+                    height: 50px;
+                    background: none;
+                    border: 1px solid black;
+                    font-weight: bold;
+                    &:hover{
+                        scale: 1.0;
+                    }
+                }
+            }
+        }
+    }
+}

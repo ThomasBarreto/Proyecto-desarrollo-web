@@ -117,18 +117,19 @@
                             font-weight: bold;
                         }
                     }
-                    .inputcantidad {
+                    .cantidad {
+                        border: 1px solid black;
+                        width: 75px;
+                        height: 35px;
                         display: flex;
-                        width: 40%;
                         align-items: center;
                         justify-content: center;
                         grid-area: inputcant;
-                        input {
+                        margin: 0px 5px;
+                        p {
+                            margin: 0 auto;
                             text-align: center;
                             font-size: map-get($sizes, parrafos );
-                            width: 80px;
-                            height: 30px;
-                            padding: 2px;
                         }
                     }
                 }
@@ -677,18 +678,19 @@
                             font-weight: bold;
                         }
                     }
-                    .inputcantidad {
+                    .cantidad {
+                        border: 1px solid black;
+                        width: 75px;
+                        height: 35px;
                         display: flex;
-                        width: 40%;
                         align-items: center;
                         justify-content: center;
                         grid-area: inputcant;
-                        input {
+                        margin: 0px 5px;
+                        p {
+                            margin: 0 auto;
                             text-align: center;
                             font-size: map-get($sizes, parrafos );
-                            width: 80px;
-                            height: 30px;
-                            padding: 2px;
                         }
                     }
                 }

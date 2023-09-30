@@ -26,8 +26,8 @@ function dibujarCarrito() {
                 <p class="descripcion__nombre">${prod.nombre} <button id='borrar'><i class="fa-solid fa-trash-can"></i></button> </p>
                 <p class="descripcion__precio">${prod.precio}</p>
             </div>
-            <div class="inputcantidad">
-                <input type="number" name="cantidad" placeholder="1">
+            <div class="cantidad">
+                <p id="parrafoCantidad_${prod.id}">${prod.cantidad}</p>
             </div>
         </div>
         `;
@@ -41,8 +41,8 @@ function dibujarCarrito() {
                 <p class="descripcion__nombre">${prod.nombre} <button id='borrarResponsive'><i class="fa-solid fa-trash-can"></i></button></p>
                 <p class="descripcion__precio">${prod.precio}</p>
             </div>
-            <div class="inputcantidad">
-                <input type="number" name="cantidad" placeholder="1">
+            <div class="cantidad">
+                <p id="parrafoCantidad_${prod.id}">${prod.cantidad}</p>
             </div>
         </div>
     `;
@@ -71,7 +71,6 @@ function agregarAlCarrito(producto) {
         img = `${producto.img}`;
     }
 
-
     carrito.push(producto);
     console.table(carrito);
     Swal.fire({
@@ -95,8 +94,8 @@ function agregarAlCarrito(producto) {
                 <p class="descripcion__nombre">${producto.nombre} <button id='borrar'><i class="fa-solid fa-trash-can"></i></button> </p>
                 <p class="descripcion__precio">${producto.precio}</p>
             </div>
-            <div class="inputcantidad">
-                <input type="number" name="cantidad" placeholder="1">
+            <div class="cantidad">
+                <p id="parrafoCantidad_${producto.id}">${producto.cantidad}</p>
             </div>
         </div>
     `;
@@ -111,8 +110,8 @@ function agregarAlCarrito(producto) {
                 <p class="descripcion__nombre">${producto.nombre} <button id='borrarResponsive'><i class="fa-solid fa-trash-can"></i></button></p>
                 <p class="descripcion__precio">${producto.precio}</p>
             </div>
-            <div class="inputcantidad">
-                <input type="number" name="cantidad" placeholder="1">
+            <div class="cantidad">
+                <p id="parrafoCantidad_${producto.id}">${producto.cantidad}</p>
             </div>
         </div>
     `;
@@ -125,16 +124,28 @@ function agregarAlCarrito(producto) {
     
     //LOCAL STORAGE:
     localStorage.setItem('carrito',JSON.stringify(carrito));
+    
 }
 
 
 //FINALIZAR COMPRA:
 botonCompra.onclick=()=>{
-    Swal.fire(
-        'Gracias por tu compra',
-        'Recibiras el envio en las proximas 48hs',
-        'success'
-        );
+    if (carrito.length !== 0) {
+        Swal.fire({
+            title: 'Gracias por tu compra',
+            text: 'Recibirás el envío en las próximas 48 horas',
+            icon: 'success',
+            width: '400px',
+            height: '200px', 
+        });
+    } else {
+        Swal.fire({
+            title: 'No hay productos en el carrito🛒',
+            icon: 'error',
+            width: '400px',
+            height: '200px',
+        });
+    }
     carrito=[];
     containerCarrito.innerHTML='';
     botonCompra.innerText ='Comprar';
@@ -142,7 +153,22 @@ botonCompra.onclick=()=>{
 }
 //FINALIZAR COMPRA RESPONSIVE:
 botonCompraResponsive.onclick=()=>{
-    Swal.fire('Gracias por tu compra','Recibiras el envio en las proximas 48hs','success');
+    if (carrito.length !== 0) {
+        Swal.fire({
+            title: 'Gracias por tu compra',
+            text: 'Recibirás el envío en las próximas 48 horas',
+            icon: 'success',
+            width: '300px',
+            height: '100px', 
+        });
+    } else {
+        Swal.fire({
+            title: 'No hay productos en el carrito🛒',
+            icon: 'error',
+            width: '300px',
+            height: '100px',
+        });
+    }
     carrito=[];
     containerCarritoResponsive.innerHTML='';
     botonCompraResponsive.innerText ='Comprar';
@@ -152,44 +178,76 @@ botonCompraResponsive.onclick=()=>{
 // ELIMINAR ELEMENTOS CARRITO:
 
 botonVaciarCarrito.onclick=()=>{
+    if (carrito.length !== 0) {
+        Toastify({
+            text: `Eliminaste todos los productos del carrito🛒`,
+            duration: 1500,
+            close: false,
+            style:{
+                width:'300px',
+                right:'420px',
+                top:'50px',
+                color:'black',
+                background:'rgba(201, 201, 201, 0.7)',
+                boxShadow: 'none',
+                fontWeight:'bold'
+            }
+        }).showToast();
+    } else {
+        Toastify({
+            text: `No hay productos en el carrito🛒`,
+            duration: 1500,
+            close: false,
+            style:{
+                width:'300px',
+                right:'420px',
+                top:'50px',
+                color:'black',
+                background:'rgba(201, 201, 201, 0.7)',
+                boxShadow: 'none',
+                fontWeight:'bold'
+            }
+        }).showToast();
+    }
     carrito=[];
     containerCarrito.innerHTML='';
     botonCompra.innerText ='Comprar';
     localStorage.removeItem('carrito');
-    Toastify({
-        text: `Eliminaste todos los productos del carro 🛒`,
-        duration: 1500,
-        close: false,
-        style:{
-            width:'300px',
-            right:'420px',
-            top:'50px',
-            color:'black',
-            background:'rgba(201, 201, 201, 0.7)',
-            boxShadow: 'none',
-            fontWeight:'bold'
-        }
-    }).showToast();
 }
 
 
 botonVaciarCarritoResponsive.onclick=()=>{
-
+    if (carrito.length !== 0) {
+        Toastify({
+            text: `Eliminaste todos los productos del carrito🛒`,
+            duration: 1500,
+            close: false,
+            style:{
+                width:'300px',
+                top:'50px',
+                color:'black',
+                background:'rgba(201, 201, 201, 0.7)',
+                boxShadow: 'none',
+                fontWeight:'bold'
+            }
+        }).showToast();
+    } else {
+        Toastify({
+            text: `No hay productos en el carrito🛒`,
+            duration: 1500,
+            close: false,
+            style:{
+                width:'300px',
+                top:'50px',
+                color:'black',
+                background:'rgba(201, 201, 201, 0.7)',
+                boxShadow: 'none',
+                fontWeight:'bold'
+            }
+        }).showToast();
+    }
     carrito=[];
     containerCarritoResponsive.innerHTML='';
     botonCompraResponsive.innerText ='Comprar';
     localStorage.removeItem('carrito');
-    Toastify({
-        text: `Eliminaste todos los productos del carro 🛒`,
-        duration: 1500,
-        close: false,
-        style:{
-            width:'300px',
-            top:'50px',
-            color:'black',
-            background:'rgba(201, 201, 201, 0.7)',
-            boxShadow: 'none',
-            fontWeight:'bold'
-        }
-    }).showToast();
 }

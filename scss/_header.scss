@@ -110,18 +110,19 @@ header{
                         margin: 0px 5px;
                     }
                 }
-                .inputcantidad {
+                .cantidad {
+                    border: 1px solid black;
+                    width: 75px;
+                    height: 35px;
                     display: flex;
-                    width: 80px;
                     align-items: center;
-                    justify-content: start;
+                    justify-content: center;
                     grid-area: inputcant;
-                    margin: 10px 5px;
-                    input {
+                    margin: 0px 5px;
+                    p {
+                        margin: 0 auto;
                         text-align: center;
                         font-size: map-get($sizes, parrafos );
-                        width: 100%;
-                        padding: 3px;
                     }
                 }
             }

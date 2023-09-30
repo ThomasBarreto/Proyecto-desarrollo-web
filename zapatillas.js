@@ -1,5 +1,15 @@
 //ZAPATILLAS:
-function renderizarProductoZapatillas(productos){
+async function cargarProductos() {
+    const URLJSON = '../productos.json';
+    const respuesta = await fetch(URLJSON);
+    const json = await respuesta.json();
+    return json.sneakers;
+    
+}
+
+
+async function renderizarProductoZapatillas(){
+    const productos = await cargarProductos();
     const articleZapatillas = document.getElementsByClassName('article__zapatillas')[0];
 
     productos.forEach(producto => {
@@ -17,6 +27,14 @@ function renderizarProductoZapatillas(productos){
         articleZapatillas.appendChild(contenedorZapatilla);
     });
     
+    const botonesComprar = document.querySelectorAll('.comprar');
+    for (const boton of botonesComprar) {
+        boton.addEventListener('click', () => {
+            console.log('Hiciste click en el boton cuyo id es ' + boton.id);
+            const prodACarro = productos.find((producto) => producto.id == boton.id);
+            agregarAlCarrito(prodACarro);
+        });
+    };
 }
 
-renderizarProductoZapatillas(sneakers);
+renderizarProductoZapatillas();

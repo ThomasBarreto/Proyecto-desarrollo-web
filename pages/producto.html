@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SneakerStore | Ayuda</title>
-    <meta name="descripcion" content="La casa de tus zapatillas originales favorita Todas las mejores marcas del mundo, en un solo lugar. En la casa de Sneaker Store, la casa de lo original.">
-    <meta name="keywords" content="Sneakers, Original, Jordan, Sobre Nosotros">
-    <link rel="shortcut icon" href="../img/favicon.png">
+    <title>Producto</title>
+    <link rel="shortcut icon" href="/img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://kit.fontawesome.com/6686341929.js" crossorigin="anonymous"></script>
 </head>
-<body class="bodyayuda">
+<body>
     <header>
         <div class="contenedorLogo">
             <a href="../index.html"><img class="contenedorLogo__logo" src="../img/Sneakerstorelogo1.png" alt="Logo SneakerStore"></a>
         </div>
+        <!-- Inicia Navbar -->
         <nav class="navbar">
             <ul class="navbar__ul">
                 <li><a href="../index.html">Inicio</a></li>
@@ -37,7 +35,7 @@
                 </div>
                 <div class="offcanvas-body">
                     <div class="carrito__compras">
-                    <!-- aca se iran depositando los productos al carrito -->
+                        <!-- aca se iran depositando los productos al carrito -->
                     </div>
                     <div class="buttoncompra">
                         <button id="vaciarCarrito">Vaciar Carrito</button>
@@ -46,10 +44,11 @@
                 </div>
             </div>
         </div>
+
             
     <!-- Navbar responsive -->
         <nav class="nav__responsive">
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+            <button id="verCarrito" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
@@ -91,36 +90,10 @@
         </div>
         <!-- Navbar responsive -->
     </header>
-    <main>
-        <div class="titulo__ayuda">
-            <h1>Preguntas Frecuentes</h1>
+    <main id="mainProducto">
+        <div id="detalle-producto">
+            <!-- Aquí se llenará la información del producto seleccionado -->
         </div>
-        <section class="ayudacontainer"> 
-                <div class="imagenayuda">
-                    <a href="#"><p>Click aqui</p></a>
-                    <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/seguimiento-pedidos-brand-m_tcm216-1014438.jpg" alt="Seguimiento de pedidos" width="200px" height="200px">
-                </div>
-                <div class="imagenayuda">
-                    <a href="#"><p>Click aqui</p></a>
-                    <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/pagos-brand-m_tcm216-1014433.jpg" alt="Pagos" width="200px" height="200px">
-                </div>
-                <div class="imagenayuda">
-                    <a href="#"><p>Click aqui</p></a>
-                    <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/reembolsos-brand-m_tcm216-1014435.jpg" alt="Reembolsos" width="200px" height="200px">
-                </div>
-                <div class="imagenayuda">
-                    <a href="#"><p>Click aqui</p></a>
-                    <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/vouchers-brand-m_tcm216-1014441.jpg" alt="Vouchers" width="200px" height="200px">
-                </div>
-                <div class="imagenayuda">
-                    <a href="#"><p>Click aqui</p></a>
-                    <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/entregas-brand-m_tcm216-1014431.jpg" alt="Envios" width="200px" height="200px">
-                </div>
-                <div class="imagenayuda ">
-                    <a href="#"><p>Click aqui</p></a>
-                    <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/devoluaciones-brand-m_tcm216-1014427.jpg" alt="Devoluciones" width="200px" height="200px">
-                </div>
-        </section>
     </main>
     <footer>
         <div>
@@ -129,23 +102,11 @@
             <a href="https://www.tiktok.com/@nike?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
         </div>
         <div class="cookies">
-            <a href="../index.html">© Sneaker Store 2023</a>
+            <a href="./index.html">© Sneaker Store 2023</a>
         </div>
     </footer>
-    <!-- AOS.init -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-
-    <!-- javascript -->
     <script src="../productos.json"></script>
-    <script src="../productos.js"></script>
+    <script src="../detallesprod.js"></script>
     <script src="../carrito.js" ></script>
-
-    <!-- SweetAlert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- Toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
