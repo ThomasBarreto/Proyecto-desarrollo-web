@@ -66,25 +66,6 @@
 // renderizarProducto(sneakers);
 
 
-// //jugando con el fetch y productos.json
-// function productosJson() {
-//     const URLJSON = 'productos.json'
-//     fetch(URLJSON)
-//         .then((respuesta) => respuesta.json())
-//         .then((json) => {
-//             const sneakers = json.sneakers
-//             console.log(sneakers);
-//             const jordan = sneakers.filter(sneaker => sneaker.nombre.includes('Jordan'))
-//             console.log(jordan);
-//         })
-
-// }
-
-// productosJson();
-
-
-
-
 /*UTILIZANDO FETCH PARA LLAMAR LOCALMENTE A PRODUCTOS.JSON*/
 
 async function cargarProductos() {
@@ -105,7 +86,7 @@ async function renderizarProductoSection1() {
         contenedorProductoSection1.classList.add('containerimg');
 
         contenedorProductoSection1.innerHTML = `
-            <a href="pages/producto.html?id=${producto.id}"><img class="carruselImagenes" src="${producto.img.slice(2)}" alt="${producto.nombre}"></a>
+            <a href="pages/producto.html?id=${producto.id}"><img class="carruselImagenes" src="${producto.img.slice(1)}" alt="${producto.nombre}"></a>
             <p class="nombre">${producto.nombre}</p>
             <p class="precio">$${producto.precio}</p>
             <div class="botoncarrito">
@@ -128,7 +109,7 @@ async function renderizarProducto() {
         contenedorProducto.classList.add('container2');
 
         contenedorProducto.innerHTML = `
-            <a href="pages/producto.html?id=${producto.id}"><img class="carruselImagenes2" src="${producto.img.slice(2)}" alt="${producto.nombre}"></a>
+            <a href="pages/producto.html?id=${producto.id}"><img class="carruselImagenes2" src="${producto.img.slice(1)}" alt="${producto.nombre}"></a>
             <p class="nombre">${producto.nombre}</p>
             <p class="precio">$${producto.precio}</p>
             <div class="botoncarrito">

@@ -45,7 +45,7 @@ async function cargarDetalleProducto(productoId) {
                     <li><button>44</button></li>
                 </ul>
                 <div class="botoncarrito">
-                    <button class="comprar" id="${producto.id}" type="submit">
+                    <button class="comprarProd" id="${producto.id}" type="submit">
                         Finalizar Compra
                     </button>
                 </div>
