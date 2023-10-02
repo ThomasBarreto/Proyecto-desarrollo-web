@@ -25,7 +25,7 @@ async function cargarDetalleProducto(productoId) {
     if (producto) {
         const detalleProducto = document.getElementById('detalle-producto');
         detalleProducto.innerHTML = `
-            <img src="${producto.img.slice(2)}" alt="${producto.nombre}">
+            <img src="${producto.img}" alt="${producto.nombre}">
             <div class="containerDetalles">
                 <h1>${producto.nombre}</h1>
                 <p class="precio">$${producto.precio}</p>
@@ -50,9 +50,19 @@ async function cargarDetalleProducto(productoId) {
                     </button>
                 </div>
             </div>
-                `;
+            `;
+                
     } else {
         const detalleProducto = document.getElementById('detalle-producto');
         detalleProducto.innerHTML = '<p>Producto no encontrado</p>';
     }
+}
+
+
+const botonFinalizarCompra = document.getElementsByClassName('comprarProd');
+
+botonFinalizarCompra.onclick = ()=>{
+    swal.fire({
+        title:'gola'
+    })
 }
