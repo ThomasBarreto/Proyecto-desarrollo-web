@@ -17,7 +17,7 @@ async function renderizarProductoZapatillas(){
         contenedorZapatilla.classList.add('contenidoimagen');
         
         contenedorZapatilla.innerHTML =`
-        <img src="${producto.img}" alt="${producto.nombre}">
+        <a href="../pages/producto.html?id=${producto.id}"><img src="${producto.img}" alt="${producto.nombre}"></a>
         <p class="nombrezapas">${producto.nombre}</p>
         <p class="preciozapas">${producto.precio}</p>
         <div class="botoncarrito">

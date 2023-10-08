@@ -45,24 +45,21 @@ async function cargarDetalleProducto(productoId) {
                     <li><button>44</button></li>
                 </ul>
                 <div class="botoncarrito">
-                    <button class="comprarProd" id="${producto.id}" type="submit">
+                    <button class="finalizarCompra" id="${producto.id}" type="submit">
                         Finalizar Compra
                     </button>
                 </div>
             </div>
-            `;
-                
+            `;    
+            const botonesFinalizarComprar = document.querySelectorAll('.finalizarCompra');
+            for (const boton of botonesFinalizarComprar) {
+                boton.addEventListener('click', () => {
+                    window.location.href='finalizarCompra.html'
+                    console.log('hiciste click en el boton');
+                });
+            };
     } else {
         const detalleProducto = document.getElementById('detalle-producto');
         detalleProducto.innerHTML = '<p>Producto no encontrado</p>';
     }
-}
-
-
-const botonFinalizarCompra = document.getElementsByClassName('comprarProd');
-
-botonFinalizarCompra.onclick = ()=>{
-    swal.fire({
-        title:'gola'
-    })
 }

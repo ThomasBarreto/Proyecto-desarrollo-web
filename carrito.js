@@ -132,13 +132,17 @@ function agregarAlCarrito(producto) {
 botonCompra.onclick=()=>{
     if (carrito.length !== 0) {
         Swal.fire({
-            title: 'Gracias por tu compra',
-            text: 'Recibirás el envío en las próximas 48 horas',
+            title: '¡Aún no hemos terminado!',
+            text: 'Por favor, completa los siguientes datos para finalizar tu compra:',
             icon: 'success',
             width: '400px',
-            height: '200px', 
+            height: '200px',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '../pages/finalizarCompra.html';
+            }
         });
-    } else {
+        } else {
         Swal.fire({
             title: 'No hay productos en el carrito🛒',
             icon: 'error',
@@ -155,11 +159,15 @@ botonCompra.onclick=()=>{
 botonCompraResponsive.onclick=()=>{
     if (carrito.length !== 0) {
         Swal.fire({
-            title: 'Gracias por tu compra',
-            text: 'Recibirás el envío en las próximas 48 horas',
+            title: '¡Aún no hemos terminado!',
+            text: 'Por favor, completa los siguientes datos para finalizar tu compra:',
             icon: 'success',
-            width: '300px',
-            height: '100px', 
+            width: '400px',
+            height: '200px',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '../pages/finalizarCompra.html';
+            }
         });
     } else {
         Swal.fire({

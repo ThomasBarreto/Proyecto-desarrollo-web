@@ -1,0 +1,153 @@
+.logoFinalizarCompra{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .contenedorLogo__logo{
+        width: 140px;
+        height: 140px;
+    }
+}
+#mainFinalizarCompra{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 70vh;
+    .containerForm{
+        width: 550px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        .formCompra{
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: stretch;
+            h2{
+                color: black;
+                text-align: center;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 25px;
+            }
+            .nombreApellido{
+                display: flex;
+                input{
+                    background: none;
+                    border: 1px solid black;
+                    margin: 0 10px;
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+                label{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .correoTelefono{
+                display: flex;
+                flex-direction: column;
+                input{
+                    background: none;
+                    border: 1px solid black;
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+                label{
+                    color: black;
+                }
+            }
+            .opcionnEnvio{
+                align-items: center;
+                justify-content: center;
+                width: 40%;
+                input{
+                    color: black;
+                }
+                label{
+                    display: flex;
+                    justify-content: space-between;
+                    color: black;
+                }
+            }
+            .direccion{
+                display: flex;
+                flex-direction: column;
+                input{
+                    background: none;
+                    border: 1px solid black;
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+                label{
+                    color: black;
+                }
+            }
+            .selects{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                .selectPais{
+                    background: none;
+                    border: 1px solid black;
+                    padding: 5px;
+                    border-radius: 10px;
+                    width: 70%;
+                    height: 40px;
+                    margin-right: 10px;
+                }
+                .selectLocalidad{
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                        background: none;
+                        border: 1px solid black;
+                        padding: 5px;
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 40px;  
+                    }
+                }
+            }
+            .inputCompra{
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.231);
+                border: 1px solid black;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .sectionTarjeta{
+                display: flex;
+                width: 100%;
+                .numeroNombre{
+                    margin-right: 10px;
+                    input{
+                        border: 1px solid black;
+                        padding: 5px;
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 40px; 
+                    }
+                }
+                .fechaCodigo{
+                    margin-left: 10px;
+                    input{
+                        border: 1px solid black;
+                        padding: 5px;
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 40px; 
+                    }
+                    h5 {
+                        font-size: 14px;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -917,6 +917,7 @@ footer .cookies a {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  position: relative;
 }
 #mainProducto #detalle-producto {
   display: grid;
@@ -1005,6 +1006,161 @@ footer .cookies a {
 }
 #mainProducto #detalle-producto .talles .botoncarrito button:hover {
   scale: 1;
+}
+
+.logoFinalizarCompra {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoFinalizarCompra .contenedorLogo__logo {
+  width: 140px;
+  height: 140px;
+}
+
+#mainFinalizarCompra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+#mainFinalizarCompra .containerForm {
+  width: 550px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+#mainFinalizarCompra .containerForm .formCompra {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#mainFinalizarCompra .containerForm .formCompra h2 {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#mainFinalizarCompra .containerForm .formCompra .nombreApellido {
+  display: flex;
+}
+#mainFinalizarCompra .containerForm .formCompra .nombreApellido input {
+  background: none;
+  border: 1px solid black;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+#mainFinalizarCompra .containerForm .formCompra .nombreApellido label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainFinalizarCompra .containerForm .formCompra .correoTelefono {
+  display: flex;
+  flex-direction: column;
+}
+#mainFinalizarCompra .containerForm .formCompra .correoTelefono input {
+  background: none;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+}
+#mainFinalizarCompra .containerForm .formCompra .correoTelefono label {
+  color: black;
+}
+#mainFinalizarCompra .containerForm .formCompra .opcionnEnvio {
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+#mainFinalizarCompra .containerForm .formCompra .opcionnEnvio input {
+  color: black;
+}
+#mainFinalizarCompra .containerForm .formCompra .opcionnEnvio label {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+#mainFinalizarCompra .containerForm .formCompra .direccion {
+  display: flex;
+  flex-direction: column;
+}
+#mainFinalizarCompra .containerForm .formCompra .direccion input {
+  background: none;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+}
+#mainFinalizarCompra .containerForm .formCompra .direccion label {
+  color: black;
+}
+#mainFinalizarCompra .containerForm .formCompra .selects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#mainFinalizarCompra .containerForm .formCompra .selects .selectPais {
+  background: none;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  width: 70%;
+  height: 40px;
+  margin-right: 10px;
+}
+#mainFinalizarCompra .containerForm .formCompra .selects .selectLocalidad {
+  display: flex;
+  flex-direction: column;
+}
+#mainFinalizarCompra .containerForm .formCompra .selects .selectLocalidad input {
+  background: none;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+}
+#mainFinalizarCompra .containerForm .formCompra .inputCompra {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.231);
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#mainFinalizarCompra .containerForm .formCompra .sectionTarjeta {
+  display: flex;
+  width: 100%;
+}
+#mainFinalizarCompra .containerForm .formCompra .sectionTarjeta .numeroNombre {
+  margin-right: 10px;
+}
+#mainFinalizarCompra .containerForm .formCompra .sectionTarjeta .numeroNombre input {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+}
+#mainFinalizarCompra .containerForm .formCompra .sectionTarjeta .fechaCodigo {
+  margin-left: 10px;
+}
+#mainFinalizarCompra .containerForm .formCompra .sectionTarjeta .fechaCodigo input {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+}
+#mainFinalizarCompra .containerForm .formCompra .sectionTarjeta .fechaCodigo h5 {
+  font-size: 14px;
+  padding: 2px;
 }
 
 /*MEDIA QUERIS 320PX/580PX MOBILE*/
@@ -1524,10 +1680,203 @@ footer .cookies a {
   .container__contactform2 .contactform2 .contactform2__titulo a p {
     font-size: 12px;
   }
+  #mainProducto {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+  }
+  #mainProducto #detalle-producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: " img tituloPrecio " " img talles " " img talles " " img talles ";
+    justify-items: stretch;
+    align-items: center;
+  }
+  #mainProducto #detalle-producto img {
+    margin: 0 20px;
+    grid-area: img;
+    width: 550px;
+    height: 700px;
+  }
+  #mainProducto #detalle-producto .containerDetalles {
+    grid-area: tituloPrecio;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+  }
+  #mainProducto #detalle-producto .containerDetalles h1 {
+    width: 100%;
+    height: max-content;
+    font-size: 28px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  #mainProducto #detalle-producto .containerDetalles p {
+    width: max-content;
+    height: max-content;
+    font-size: 14px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  #mainProducto #detalle-producto .talles {
+    width: 100%;
+    grid-area: talles;
+    display: flex;
+    flex-direction: column;
+  }
+  #mainProducto #detalle-producto .talles h2 {
+    height: max-content;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  #mainProducto #detalle-producto .talles ul {
+    padding: 10px;
+    height: 300px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-left: 0;
+  }
+  #mainProducto #detalle-producto .talles ul li {
+    margin: 8px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 80px;
+    height: max-content;
+  }
+  #mainProducto #detalle-producto .talles ul li button {
+    background: rgba(0, 0, 0, 0.046);
+    border: none;
+    width: 100%;
+  }
+  #mainProducto #detalle-producto .talles .botoncarrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #mainProducto #detalle-producto .talles .botoncarrito button {
+    width: 100%;
+    height: 50px;
+    background: none;
+    border: 1px solid black;
+    font-weight: bold;
+  }
+  #mainProducto #detalle-producto .talles .botoncarrito button:hover {
+    scale: 1;
+  }
   /*OFF CANVAS BACKDROP*/
   .offcanvas-backdrop {
     width: 100%;
     height: 100%;
+  }
+  /*DETALLES PRODUCTOS*/
+  #mainProducto {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+  }
+  #mainProducto #detalle-producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: " img tituloPrecio " " img talles " " img talles " " img talles ";
+    justify-items: stretch;
+    align-items: center;
+  }
+  #mainProducto #detalle-producto img {
+    margin: 0 20px;
+    grid-area: img;
+    width: 550px;
+    height: 700px;
+  }
+  #mainProducto #detalle-producto .containerDetalles {
+    grid-area: tituloPrecio;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+  }
+  #mainProducto #detalle-producto .containerDetalles h1 {
+    width: 100%;
+    height: max-content;
+    font-size: 28px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  #mainProducto #detalle-producto .containerDetalles p {
+    width: max-content;
+    height: max-content;
+    font-size: 14px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  #mainProducto #detalle-producto .talles {
+    width: 100%;
+    grid-area: talles;
+    display: flex;
+    flex-direction: column;
+  }
+  #mainProducto #detalle-producto .talles h2 {
+    height: max-content;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  #mainProducto #detalle-producto .talles ul {
+    padding: 10px;
+    height: 300px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-left: 0;
+  }
+  #mainProducto #detalle-producto .talles ul li {
+    margin: 8px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 80px;
+    height: max-content;
+  }
+  #mainProducto #detalle-producto .talles ul li button {
+    background: rgba(0, 0, 0, 0.046);
+    border: none;
+    width: 100%;
+  }
+  #mainProducto #detalle-producto .talles .botoncarrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #mainProducto #detalle-producto .talles .botoncarrito button {
+    width: 100%;
+    height: 50px;
+    background: none;
+    border: 1px solid black;
+    font-weight: bold;
+  }
+  #mainProducto #detalle-producto .talles .botoncarrito button:hover {
+    scale: 1;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
