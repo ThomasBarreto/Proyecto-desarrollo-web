@@ -139,7 +139,7 @@ botonCompra.onclick=()=>{
             height: '200px',
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = './pages/finalizarCompra.html';
+                window.location.href = '/pages/finalizarCompra.html';
             }
         });
         } else {
@@ -166,7 +166,7 @@ botonCompraResponsive.onclick=()=>{
             height: '200px',
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = './pages/finalizarCompra.html';
+                window.location.href = '/pages/finalizarCompra.html';
             }
         });
     } else {
