@@ -139,7 +139,12 @@ botonCompra.onclick=()=>{
             height: '200px',
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '/pages/finalizarCompra.html';
+                const currentURL = window.location.href;
+                if ((currentURL.includes('index.html')) || currentURL == ('https://thomasbarreto.github.io/Proyecto-desarrollo-web/')){
+                    window.location.href = 'pages/finalizarCompra.html';
+                } else {
+                    window.location.href = 'finalizarCompra.html';
+                }
             }
         });
         } else {
@@ -166,7 +171,12 @@ botonCompraResponsive.onclick=()=>{
             height: '200px',
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '/pages/finalizarCompra.html';
+                const currentURL = window.location.href;
+                if ((currentURL.includes('index.html')) || currentURL == ('https://thomasbarreto.github.io/Proyecto-desarrollo-web/')){
+                    window.location.href = 'pages/finalizarCompra.html';
+                } else {
+                    window.location.href = 'finalizarCompra.html';
+                }
             }
         });
     } else {
