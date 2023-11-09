@@ -27,7 +27,9 @@ function dibujarCarrito() {
                 <p class="descripcion__precio">${prod.precio}</p>
             </div>
             <div class="cantidad">
-                <p id="parrafoCantidad_${prod.id}">${prod.cantidad}</p>
+                <button id='decrement'>-</button>
+                <p id="parrafoCantidad_${prod.id}">1</p>
+                <button id='increment'>+</button>
             </div>
         </div>
         `;
@@ -42,7 +44,9 @@ function dibujarCarrito() {
                 <p class="descripcion__precio">${prod.precio}</p>
             </div>
             <div class="cantidad">
-                <p id="parrafoCantidad_${prod.id}">${prod.cantidad}</p>
+                <button id='decrement'>-</button>
+                <p id="parrafoCantidad_${prod.id}">1</p>
+                <button id='increment'>+</button>
             </div>
         </div>
     `;
@@ -95,7 +99,9 @@ function agregarAlCarrito(producto) {
                 <p class="descripcion__precio">${producto.precio}</p>
             </div>
             <div class="cantidad">
-                <p id="parrafoCantidad_${producto.id}">${producto.cantidad}</p>
+                <button id='decrement'>-</button>
+                <p id="parrafoCantidad_${producto.id}">1</p>
+                <button id='increment'>+</button>
             </div>
         </div>
     `;
@@ -111,7 +117,9 @@ function agregarAlCarrito(producto) {
                 <p class="descripcion__precio">${producto.precio}</p>
             </div>
             <div class="cantidad">
-                <p id="parrafoCantidad_${producto.id}">${producto.cantidad}</p>
+                <button id='decrement'>-</button>
+                <p id="parrafoCantidad_${producto.id}">1</p>
+                <button id='increment'>+</button>
             </div>
         </div>
     `;
@@ -143,7 +151,7 @@ botonCompra.onclick=()=>{
                 if ((currentURL.includes('index.html')) || currentURL == ('https://thomasbarreto.github.io/Proyecto-desarrollo-web/')){
                     window.location.href = 'pages/finalizarCompra.html';
                 } else {
-                    window.location.href = 'finalizarCompra.html';
+                    window.location.href = 'pages/finalizarCompra.html';
                 }
             }
         });
@@ -269,3 +277,5 @@ botonVaciarCarritoResponsive.onclick=()=>{
     botonCompraResponsive.innerText ='Comprar';
     localStorage.removeItem('carrito');
 }
+
+

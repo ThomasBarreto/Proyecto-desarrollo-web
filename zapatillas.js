@@ -1,12 +1,14 @@
 //ZAPATILLAS:
+//ZAPATILLAS:
+let zapatillas = [];
+
 async function cargarProductos() {
     const URLJSON = '../productos.json';
     const respuesta = await fetch(URLJSON);
     const json = await respuesta.json();
-    return json.sneakers;
-    
+    zapatillas = json.sneakers;
+    return zapatillas;
 }
-
 
 async function renderizarProductoZapatillas(){
     const productos = await cargarProductos();
@@ -39,7 +41,81 @@ async function renderizarProductoZapatillas(){
 
 renderizarProductoZapatillas();
 
+let nikeCheckbox = document.getElementById('nike');
+let adidasCheckbox = document.getElementById('adidas');
+let vansCheckbox = document.getElementById('vans');
+
+nikeCheckbox.addEventListener('change', () => {
+    const isChecked = nikeCheckbox.checked;
+    const filteredSneakers = isChecked? filtrarZapatillasPorMarca('Nike') : zapatillas;
+
+    const articleZapatillas = document.querySelector('.article__zapatillas');
+    articleZapatillas.innerHTML = '';
+
+    filteredSneakers.forEach(zapatilla => {
+        const contenedorZapatilla = document.createElement('div');
+        contenedorZapatilla.classList.add('contenidoimagen');
+
+        contenedorZapatilla.innerHTML = `
+            <a href="../pages/producto.html?id=${zapatilla.id}"><img src="${zapatilla.img}" alt="${zapatilla.nombre}"></a>
+            <p class="nombrezapas">${zapatilla.nombre}</p>
+            <p class="preciozapas">${zapatilla.precio}</p>
+            <div class="botoncarrito">
+                <button class='comprar' id=${zapatilla.id} type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        `;
+        articleZapatillas.appendChild(contenedorZapatilla);
+    });
+});
+
+adidasCheckbox.addEventListener('change', () => {
+    const isChecked = adidasCheckbox.checked;
+    const filteredSneakers = isChecked? filtrarZapatillasPorMarca('Adidas') : zapatillas;
+
+    const articleZapatillas = document.querySelector('.article__zapatillas');
+    articleZapatillas.innerHTML = '';
+
+    filteredSneakers.forEach(zapatilla => {
+        const contenedorZapatilla = document.createElement('div');
+        contenedorZapatilla.classList.add('contenidoimagen');
+
+        contenedorZapatilla.innerHTML = `
+            <a href="../pages/producto.html?id=${zapatilla.id}"><img src="${zapatilla.img}" alt="${zapatilla.nombre}"></a>
+            <p class="nombrezapas">${zapatilla.nombre}</p>
+            <p class="preciozapas">${zapatilla.precio}</p>
+            <div class="botoncarrito">
+                <button class='comprar' id=${zapatilla.id} type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        `;
+        articleZapatillas.appendChild(contenedorZapatilla);
+    });
+});
+
+vansCheckbox.addEventListener('change', () => {
+    const isChecked = vansCheckbox.checked;
+    const filteredSneakers = isChecked? filtrarZapatillasPorMarca('Vans') : zapatillas;
+
+    const articleZapatillas = document.querySelector('.article__zapatillas');
+    articleZapatillas.innerHTML = '';
+
+    filteredSneakers.forEach(zapatilla => {
+        const contenedorZapatilla = document.createElement('div');
+        contenedorZapatilla.classList.add('contenidoimagen');
+
+        contenedorZapatilla.innerHTML = `
+            <a href="../pages/producto.html?id=${zapatilla.id}"><img src="${zapatilla.img}" alt="${zapatilla.nombre}"></a>
+            <p class="nombrezapas">${zapatilla.nombre}</p>
+            <p class="preciozapas">${zapatilla.precio}</p>
+            <div class="botoncarrito">
+                <button class='comprar' id=${zapatilla.id} type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        `;
+        articleZapatillas.appendChild(contenedorZapatilla);
+    });
+});
 
 
-//filtros
-
+function filtrarZapatillasPorMarca(marca) {
+    const filteredSneakers = zapatillas.filter(zapatilla => zapatilla.marca.toLowerCase() === marca.toLowerCase());
+    return filteredSneakers;
+}
